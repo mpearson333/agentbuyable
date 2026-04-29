@@ -594,8 +594,7 @@ section { position: relative; }
 /* SCORE RESULT */
 .score-result {
   display: none;
-  text-align: center;
-  padding: 28px 0 0;
+  padding: 20px 0 0;
   border-top: 1px solid rgba(201,168,76,0.12);
 }
 
@@ -603,10 +602,11 @@ section { position: relative; }
 
 .score-grade {
   font-family: var(--font-display);
-  font-size: 72px;
+  font-size: 52px;
   letter-spacing: 0.04em;
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  display: inline-block;
 }
 
 .score-grade.grade-a { color: #4ade80; }
@@ -616,17 +616,18 @@ section { position: relative; }
 .score-grade.grade-f { color: #f87171; }
 
 .score-fraction {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--white);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  display: block;
 }
 
 .score-bar-track {
-  height: 6px;
+  height: 5px;
   background: rgba(255,255,255,0.08);
   border-radius: 999px;
   overflow: hidden;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
 .score-bar-fill {
@@ -639,28 +640,44 @@ section { position: relative; }
 
 .score-headline {
   font-family: var(--font-display);
-  font-size: clamp(18px, 3vw, 26px);
+  font-size: clamp(15px, 2.5vw, 20px);
   letter-spacing: 0.04em;
   color: var(--white);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .score-copy {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--white);
-  line-height: 1.7;
-  margin-bottom: 28px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .score-ctas {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
-.score-ctas .btn-primary,
-.score-ctas .btn-outline {
-  width: 100%;
+.score-result-inner {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.score-result-left {
+  text-align: center;
+}
+
+.score-result-right {
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .score-result-inner { grid-template-columns: 1fr; }
+  .score-result-left { text-align: left; display: flex; align-items: center; gap: 16px; }
+  .score-bar-track { width: 80px; margin-bottom: 0; }
 }
 
 /* =====================
@@ -1477,14 +1494,20 @@ footer {
     </div>
 
     <div class="score-result" id="scoreResult">
-      <div class="score-grade" id="scoreGrade">--</div>
-      <div class="score-fraction" id="scoreFraction">0 of 4 checks passing</div>
-      <div class="score-bar-track">
-        <div class="score-bar-fill" id="scoreBar"></div>
+      <div class="score-result-inner">
+        <div class="score-result-left">
+          <div class="score-grade" id="scoreGrade">--</div>
+          <div class="score-fraction" id="scoreFraction">0 of 4</div>
+          <div class="score-bar-track">
+            <div class="score-bar-fill" id="scoreBar"></div>
+          </div>
+        </div>
+        <div class="score-result-right">
+          <div class="score-headline" id="scoreHeadline"></div>
+          <p class="score-copy" id="scoreCopy"></p>
+          <div class="score-ctas" id="scoreCtas"></div>
+        </div>
       </div>
-      <div class="score-headline" id="scoreHeadline"></div>
-      <p class="score-copy" id="scoreCopy"></p>
-      <div class="score-ctas" id="scoreCtas"></div>
     </div>
   </div>
 </div>
@@ -2083,7 +2106,7 @@ function showScoreResult(results, domain) {
   gradeEl.textContent = grade;
   gradeEl.className = 'score-grade ' + gradeClass;
 
-  document.getElementById('scoreFraction').textContent = `${passing} of ${total} checks passing`;
+  document.getElementById('scoreFraction').textContent = `${passing}/${total} passing`;
   document.getElementById('scoreHeadline').textContent = headline;
   document.getElementById('scoreCopy').textContent = copy;
   document.getElementById('scoreCtas').innerHTML = ctas;
