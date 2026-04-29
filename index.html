@@ -1981,6 +1981,8 @@ function resetScoreModal() {
   });
 }
 
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
 async function runScoreCheck() {
   const raw = document.getElementById('domainInput').value.trim();
   const domain = raw.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '');
