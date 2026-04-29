@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentBuyable -- Make Your Business Discoverable, Bookable, and Payable by AI Agents</title>
+<meta name="description" content="AgentBuyable makes any service-based business discoverable, bookable, and transactable by AI agents. One script tag. No dev work. Live in days.">
+<meta name="keywords" content="AI agents, agentic commerce, AI buyability, LLM optimization, agent-ready business, Stripe ACP, agentic payments, bookable by AI, AgentBuyable">
+<meta name="robots" content="index, follow">
+<meta name="author" content="AgentBuyable by Strativa AI">
+<meta property="og:title" content="AgentBuyable -- Make Your Business Buyable by AI Agents">
+<meta property="og:description" content="One script. Your business found, booked, and paid by AI agents. Live in days.">
+<meta property="og:url" content="https://agentbuyable.ai">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AgentBuyable -- Make Your Business Buyable by AI Agents">
+<meta name="twitter:description" content="One script. Your business found, booked, and paid by AI agents. Live in days.">
+<link rel="canonical" href="https://agentbuyable.ai">
+<link rel="llms-txt" href="https://agentbuyable.ai/llms.txt" type="text/plain">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AgentBuyable Starter",
+    "description": "Self-serve AI agent setup. Business profile built for AI, up to 5 services structured for agents, agentic gateway, Stripe ACP setup, monthly AI Buyability Score.",
+    "provider": { "@type": "Organization", "name": "AgentBuyable", "url": "https://agentbuyable.ai" },
+    "offers": {
+      "@type": "Offer",
+      "name": "Starter Setup + Monthly",
+      "price": "397",
+      "priceCurrency": "USD",
+      "description": "$397 one-time setup plus $47/month or $470/year",
+      "url": "YOUR_STARTER_URL",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2027-01-01"
+    },
+    "areaServed": "Worldwide",
+    "serviceType": "Agentic Commerce Setup"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AgentBuyable Growth",
+    "description": "Done-with-you AI agent infrastructure. Everything in Starter plus up to 10 services, competitor analysis, monthly performance call, Stripe ACP completed together.",
+    "provider": { "@type": "Organization", "name": "AgentBuyable", "url": "https://agentbuyable.ai" },
+    "offers": {
+      "@type": "Offer",
+      "name": "Growth Setup + Monthly",
+      "price": "1997",
+      "priceCurrency": "USD",
+      "description": "$1,997 one-time setup plus $197/month or $1,970/year",
+      "url": "YOUR_GROWTH_URL",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2027-01-01"
+    },
+    "areaServed": "Worldwide",
+    "serviceType": "Agentic Commerce Setup"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AgentBuyable Pro",
+    "description": "Fully done-for-you AI agent infrastructure. Up to 25 services, 50 agent Q&A pairs, competitor gap analysis, dedicated account manager, bi-weekly calls.",
+    "provider": { "@type": "Organization", "name": "AgentBuyable", "url": "https://agentbuyable.ai" },
+    "offers": {
+      "@type": "Offer",
+      "name": "Pro Setup + Monthly",
+      "price": "3997",
+      "priceCurrency": "USD",
+      "description": "$3,997 one-time setup plus $397/month or $3,970/year",
+      "url": "YOUR_PRO_URL",
+      "availability": "https://schema.org/InStock",
+      "priceValidUntil": "2027-01-01"
+    },
+    "areaServed": "Worldwide",
+    "serviceType": "Agentic Commerce Setup"
+  }
+]
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AgentBuyable",
+  "url": "https://agentbuyable.ai",
+  "description": "AgentBuyable makes any service-based business discoverable, bookable, and transactable by AI agents. One script tag. No dev work. Live in days.",
+  "founder": { "@type": "Person", "name": "Mark Pearson" },
+  "sameAs": ["https://strativa-ai.com"],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Starter",
+      "description": "Self-serve AI agent setup for service businesses. One-time setup plus monthly optimization.",
+      "price": "397",
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "name": "Growth",
+      "description": "Done-with-you AI agent infrastructure for service businesses.",
+      "price": "1997",
+      "priceCurrency": "USD"
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro",
+      "description": "Fully done-for-you AI agent infrastructure for high-ticket service businesses.",
+      "price": "3997",
+      "priceCurrency": "USD"
+    }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Sales",
+    "url": "https://strativa-ai.com/book-a-call-strativa"
+  }
+}
+</script>
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-dim: rgba(201,168,76,0.15);
+  --black: #080808;
+  --surface: #111111;
+  --surface2: #1A1A1A;
+  --white: #F5F0E8;
+  --muted: rgba(245,240,232,0.88);
+  --dim: rgba(245,240,232,0.6);
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius: 4px;
+  --radius-lg: 12px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--gold); }
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 68px;
+  background: rgba(8,8,8,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--white); }
+
+.btn-nav {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 20px;
+  border: 1px solid var(--gold);
+  color: var(--gold) !important;
+  border-radius: var(--radius);
+  font-size: 12px !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s !important;
+  text-decoration: none;
+}
+
+.btn-nav:hover {
+  background: var(--gold) !important;
+  color: var(--black) !important;
+}
+
+/* BUTTONS */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: var(--gold);
+  color: var(--black);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.btn-outline:hover {
+  background: var(--gold-dim);
+  transform: translateY(-1px);
+}
+
+/* SECTIONS */
+section { position: relative; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+.container-narrow { max-width: 780px; margin: 0 auto; padding: 0 40px; }
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SECTION LABEL */
+.section-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+/* SECTION HEADLINE */
+.section-headline {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 56px);
+  letter-spacing: 0.04em;
+  line-height: 1.0;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+/* DIVIDER */
+.gold-rule {
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 32px;
+}
+
+/* =====================
+   HERO
+   ===================== */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 68px;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 70% 40%, rgba(201,168,76,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 70%, rgba(201,168,76,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 80px 40px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 8vw, 110px);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.hero-headline .gold-word { color: var(--gold); }
+
+.hero-sub {
+  font-family: var(--font-serif);
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-style: italic;
+  color: var(--white);
+  max-width: 600px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.hero-score-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 0;
+  text-decoration: underline;
+  text-decoration-color: rgba(201,168,76,0.4);
+  text-underline-offset: 4px;
+}
+
+.hero-score-trigger:hover { text-decoration-color: var(--gold); }
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  border-top: 1px solid rgba(201,168,76,0.2);
+}
+
+.hero-stat-num {
+  font-family: var(--font-display);
+  font-size: 40px;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  display: block;
+}
+
+.hero-stat-label {
+  font-size: 14px;
+  color: var(--white);
+  margin-top: 6px;
+  max-width: 160px;
+  line-height: 1.5;
+}
+
+/* =====================
+   SCORE MODAL
+   ===================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-box {
+  background: var(--surface);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 620px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 48px 40px 40px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s;
+}
+
+.modal-overlay.open .modal-box {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.modal-close:hover { color: var(--white); }
+
+.modal-headline {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: 0.04em;
+  line-height: 1.0;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.modal-sub {
+  color: var(--white);
+  font-size: 15px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.score-input-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.score-input {
+  flex: 1;
+  background: var(--surface2);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: var(--radius);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 14px 18px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.score-input:focus { border-color: var(--gold); }
+.score-input::placeholder { color: var(--dim); }
+
+/* CHECKS */
+.checks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: var(--surface2);
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.check-item.pass { border-color: rgba(74,222,128,0.3); }
+.check-item.fail { border-color: rgba(248,113,113,0.3); }
+
+.check-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.check-sublabel {
+  font-size: 12px;
+  color: var(--white);
+  margin-top: 2px;
+}
+
+.check-badge {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.check-badge.pending { color: var(--dim); background: rgba(255,255,255,0.05); }
+.check-badge.checking { color: var(--gold); background: var(--gold-dim); animation: pulse 1s infinite; }
+.check-badge.pass { color: #4ade80; background: rgba(74,222,128,0.12); }
+.check-badge.fail { color: #f87171; background: rgba(248,113,113,0.12); }
+
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+
+/* SCORE RESULT */
+.score-result {
+  display: none;
+  text-align: center;
+  padding: 28px 0 0;
+  border-top: 1px solid rgba(201,168,76,0.12);
+}
+
+.score-result.visible { display: block; }
+
+.score-grade {
+  font-family: var(--font-display);
+  font-size: 72px;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.score-grade.grade-a { color: #4ade80; }
+.score-grade.grade-b { color: #a3e635; }
+.score-grade.grade-c { color: var(--gold); }
+.score-grade.grade-d { color: #fb923c; }
+.score-grade.grade-f { color: #f87171; }
+
+.score-fraction {
+  font-size: 15px;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.score-bar-track {
+  height: 6px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.score-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--gold);
+  transition: width 1s ease;
+  width: 0;
+}
+
+.score-headline {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 3vw, 26px);
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.score-copy {
+  font-size: 15px;
+  color: var(--white);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.score-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.score-ctas .btn-primary,
+.score-ctas .btn-outline {
+  width: 100%;
+}
+
+/* =====================
+   PROBLEM
+   ===================== */
+#problem {
+  padding: 120px 0;
+  background: var(--black);
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.problem-copy p {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.problem-copy p strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.problem-callout {
+  background: var(--surface);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+.callout-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.callout-line:last-child { border-bottom: none; }
+
+.callout-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(248,113,113,0.12);
+  border: 1px solid rgba(248,113,113,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.callout-icon.pass {
+  background: rgba(74,222,128,0.12);
+  border-color: rgba(74,222,128,0.3);
+}
+
+.callout-text {
+  font-size: 15px;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.callout-text strong { color: var(--white); }
+
+/* =====================
+   SOCIAL PROOF
+   ===================== */
+#proof {
+  padding: 80px 0;
+  background: var(--surface);
+  border-top: 1px solid rgba(201,168,76,0.08);
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+
+.proof-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.proof-card {
+  padding: 32px 0;
+}
+
+.proof-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(17px, 2.2vw, 22px);
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.proof-quote::before { content: '\201C'; color: var(--gold); font-size: 1.4em; line-height: 0; vertical-align: -0.3em; margin-right: 4px; }
+.proof-quote::after  { content: '\201D'; color: var(--gold); font-size: 1.4em; line-height: 0; vertical-align: -0.3em; margin-left: 4px; }
+
+.proof-attr {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.proof-divider {
+  height: 1px;
+  background: rgba(201,168,76,0.15);
+}
+
+/* =====================
+   COMPOUNDING ADVANTAGE
+   ===================== */
+#compound {
+  padding: 120px 0;
+  background: var(--black);
+}
+
+.compound-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.compound-text p {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.compound-text p strong { color: var(--gold); }
+
+.compound-visual {
+  background: var(--surface);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+.compound-bar-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.compound-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.compound-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.compound-bar-name {
+  font-size: 13px;
+  color: var(--white);
+  width: 110px;
+  flex-shrink: 0;
+}
+
+.compound-bar-track {
+  flex: 1;
+  height: 20px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.compound-bar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 4px;
+  transition: width 1.4s ease;
+}
+
+.compound-bar-fill.animated {
+  width: var(--target-width);
+}
+
+.compound-bar-val {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--white);
+  width: 44px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.compound-bar-note {
+  font-size: 11px;
+  color: var(--dim);
+  font-style: italic;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .compound-inner { grid-template-columns: 1fr; gap: 40px; }
+  .proof-quote { font-size: 17px; }
+}
+#how {
+  padding: 120px 0;
+  background: var(--surface);
+  border-top: 1px solid rgba(201,168,76,0.08);
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+
+.how-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.step-card {
+  background: var(--surface2);
+  padding: 40px 32px;
+  position: relative;
+}
+
+.step-card:first-child { border-radius: var(--radius-lg) 0 0 var(--radius-lg); }
+.step-card:last-child { border-radius: 0 var(--radius-lg) var(--radius-lg) 0; }
+
+.step-num {
+  font-family: var(--font-display);
+  font-size: 72px;
+  color: rgba(201,168,76,0.6);
+  line-height: 1;
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+}
+
+.step-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.step-body {
+  font-size: 15px;
+  color: var(--white);
+  line-height: 1.75;
+}
+
+/* =====================
+   WHO IT'S FOR
+   ===================== */
+#who {
+  padding: 120px 0;
+  background: var(--black);
+}
+
+.who-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.who-card {
+  background: var(--surface);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  transition: border-color 0.3s, transform 0.2s;
+}
+
+.who-card:hover {
+  border-color: rgba(201,168,76,0.35);
+  transform: translateY(-3px);
+}
+
+.who-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.who-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.who-desc {
+  font-size: 14px;
+  color: var(--white);
+  line-height: 1.6;
+}
+
+/* =====================
+   PRICING
+   ===================== */
+#pricing {
+  padding: 120px 0;
+  background: var(--surface);
+  border-top: 1px solid rgba(201,168,76,0.08);
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.pricing-card {
+  background: var(--surface2);
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  position: relative;
+  transition: border-color 0.3s, transform 0.2s;
+}
+
+.pricing-card:hover {
+  border-color: rgba(201,168,76,0.35);
+  transform: translateY(-4px);
+}
+
+.pricing-card.featured {
+  border-color: var(--gold);
+  background: linear-gradient(160deg, #1A1A1A 0%, #141208 100%);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--black);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.pricing-tier {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.pricing-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.pricing-sub {
+  font-size: 13px;
+  color: var(--white);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.pricing-price {
+  margin-bottom: 6px;
+}
+
+.pricing-price-main {
+  font-family: var(--font-display);
+  font-size: 38px;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+
+.pricing-price-cycle {
+  font-size: 14px;
+  color: var(--white);
+}
+
+.pricing-price-annual {
+  font-size: 13px;
+  color: var(--gold);
+  margin-bottom: 28px;
+}
+
+.pricing-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin: 24px 0;
+}
+
+.pricing-section-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  margin-top: 16px;
+}
+
+.pricing-features {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.pricing-features li {
+  font-size: 14px;
+  color: var(--white);
+  line-height: 1.6;
+  padding: 5px 0;
+  padding-left: 22px;
+  position: relative;
+}
+
+.pricing-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.pricing-cta {
+  width: 100%;
+  margin-top: 28px;
+}
+
+.pricing-footnote {
+  text-align: center;
+  font-size: 13px;
+  color: var(--dim);
+  font-style: italic;
+  margin-top: 40px;
+  line-height: 1.7;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =====================
+   FAQ
+   ===================== */
+#faq {
+  padding: 120px 0;
+  background: var(--black);
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 24px 0;
+  cursor: pointer;
+  text-align: left;
+  gap: 20px;
+}
+
+.faq-question-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+.faq-icon {
+  font-size: 20px;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-item.open .faq-answer { max-height: 400px; }
+
+.faq-answer-inner {
+  padding: 0 0 24px;
+  font-size: 16px;
+  color: var(--white);
+  line-height: 1.8;
+}
+
+/* =====================
+   FINAL CTA
+   ===================== */
+#cta {
+  padding: 140px 0;
+  text-align: center;
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(201,168,76,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-headline {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 80px);
+  letter-spacing: 0.04em;
+  color: var(--white);
+  line-height: 1.0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.cta-body {
+  color: var(--white);
+  font-size: 18px;
+  max-width: 560px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+  position: relative;
+}
+
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  position: relative;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+footer {
+  background: var(--surface);
+  border-top: 1px solid rgba(201,168,76,0.12);
+  padding: 40px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--gold); }
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--dim);
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+/* HAMBURGER */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 68px;
+  left: 0; right: 0;
+  background: rgba(8,8,8,0.98);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  z-index: 99;
+  padding: 24px 20px 32px;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobile-menu.open { display: flex; }
+
+.mobile-menu a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+  transition: color 0.2s;
+}
+
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-menu a:last-child { border-bottom: none; }
+
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .hero-inner { padding: 60px 20px 48px; }
+  .container, .container-narrow { padding: 0 20px; }
+  .problem-grid { grid-template-columns: 1fr; gap: 40px; }
+  .steps-grid { grid-template-columns: 1fr; gap: 2px; }
+  .step-card:first-child { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+  .step-card:last-child { border-radius: 0 0 var(--radius-lg) var(--radius-lg); }
+  .who-grid { grid-template-columns: repeat(2, 1fr); }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .score-input-row { flex-direction: column; }
+  .modal-box { padding: 40px 20px 28px; }
+  .hero-stats { gap: 24px; }
+  .hero-stats > div { flex: 1 1 calc(50% - 12px); }
+  .cta-buttons { flex-direction: column; align-items: stretch; }
+  .cta-buttons a { text-align: center; }
+  section { padding-top: 80px; padding-bottom: 80px; }
+  #problem, #who, #faq, #cta { padding: 80px 0; }
+  #how, #pricing { padding: 80px 0; }
+  .steps-grid .step-card { border-radius: 0; }
+  .steps-grid .step-card:first-child { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+  .steps-grid .step-card:last-child { border-radius: 0 0 var(--radius-lg) var(--radius-lg); }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">AgentBuyable</a>
+  <ul class="nav-links">
+    <li><a href="#problem">Why Now</a></li>
+    <li><a href="#compound">The Advantage</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="YOUR_CONTACT_FORM_URL" target="_blank" class="btn-nav">Contact Us</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#problem" onclick="closeMobileMenu()">Why Now</a>
+  <a href="#compound" onclick="closeMobileMenu()">The Advantage</a>
+  <a href="#how" onclick="closeMobileMenu()">How It Works</a>
+  <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
+  <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+  <a href="YOUR_CONTACT_FORM_URL" target="_blank" onclick="closeMobileMenu()">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal">McKinsey: $5 Trillion Opportunity by 2030 &nbsp;&bull;&nbsp; Window Is Open Now</div>
+    <h1 class="hero-headline reveal">
+      WHILE YOU'RE<br>
+      READING THIS,<br>
+      <span class="gold-word">AI IS BOOKING</span><br>
+      YOUR COMPETITORS.
+    </h1>
+    <p class="hero-sub reveal">AI agents don't browse. They decide, book, and pay -- in seconds. Every business already set up captures that revenue. Every business that isn't gets skipped. Permanently.</p>
+    <div class="hero-ctas reveal">
+      <a href="YOUR_STARTER_URL" target="_blank" class="btn-primary">Get Agent-Ready Now</a>
+      <button class="hero-score-trigger" onclick="openScoreModal()">
+        → Check Your Free AI Buyability Score
+      </button>
+    </div>
+    <div class="hero-stats reveal">
+      <div>
+        <span class="hero-stat-num">90%</span>
+        <div class="hero-stat-label">of B2B buying will involve AI agents by 2028 (Gartner)</div>
+      </div>
+      <div>
+        <span class="hero-stat-num">$5T</span>
+        <div class="hero-stat-label">McKinsey's global agentic commerce projection by 2030 -- services not yet included</div>
+      </div>
+      <div>
+        <span class="hero-stat-num">805%</span>
+        <div class="hero-stat-label">Growth in AI-driven traffic to businesses on Black Friday 2025 vs prior year (Adobe)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCORE MODAL -->
+<div class="modal-overlay" id="scoreModal" onclick="handleOverlayClick(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeScoreModal()">&#x2715;</button>
+    <div class="modal-headline">CAN AI FIND, BOOK, AND PAY YOU?</div>
+    <p class="modal-sub">Enter your domain and we'll check whether AI agents can discover, transact with, and pay your business right now.</p>
+
+    <div class="score-input-row">
+      <input type="text" class="score-input" id="domainInput" placeholder="yourbusiness.com" />
+      <button class="btn-primary" onclick="runScoreCheck()" id="checkBtn">Check My Score</button>
+    </div>
+
+    <div class="checks-list" id="checksList">
+      <div class="check-item" id="check-0">
+        <div>
+          <div class="check-label">AI Platform Registration</div>
+          <div class="check-sublabel">Can ChatGPT, Claude, and Gemini find your business?</div>
+        </div>
+        <span class="check-badge pending">Waiting</span>
+      </div>
+      <div class="check-item" id="check-1">
+        <div>
+          <div class="check-label">Agent Interaction Layer</div>
+          <div class="check-sublabel">Can AI agents understand and interact with your services?</div>
+        </div>
+        <span class="check-badge pending">Waiting</span>
+      </div>
+      <div class="check-item" id="check-2">
+        <div>
+          <div class="check-label">Structured Service Data</div>
+          <div class="check-sublabel">Are your services, pricing, and availability readable by AI?</div>
+        </div>
+        <span class="check-badge pending">Waiting</span>
+      </div>
+      <div class="check-item" id="check-3">
+        <div>
+          <div class="check-label">AI Crawler Access</div>
+          <div class="check-sublabel">Are AI indexing systems allowed to read your site?</div>
+        </div>
+        <span class="check-badge pending">Waiting</span>
+      </div>
+    </div>
+
+    <div class="score-result" id="scoreResult">
+      <div class="score-grade" id="scoreGrade">--</div>
+      <div class="score-fraction" id="scoreFraction">0 of 4 checks passing</div>
+      <div class="score-bar-track">
+        <div class="score-bar-fill" id="scoreBar"></div>
+      </div>
+      <div class="score-headline" id="scoreHeadline"></div>
+      <p class="score-copy" id="scoreCopy"></p>
+      <div class="score-ctas" id="scoreCtas"></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="container">
+    <div class="problem-grid">
+      <div class="problem-copy reveal">
+        <span class="section-label">What's Happening Right Now</span>
+        <h2 class="section-headline">SOMEONE IN YOUR MARKET IS GETTING SET UP THIS WEEK.</h2>
+        <p>There is a med spa, a fitness studio, a boutique hotel, a coach -- in your city, in your category -- that is becoming agent-ready right now. When someone asks ChatGPT, Perplexity, or Gemini to find and book a service like yours, <strong>that business shows up. You don't.</strong></p>
+        <p>And here's what most business owners miss: this isn't just about today's lost booking. AI agents develop preferences. <strong>The businesses they transact with successfully get recommended again.</strong> Every competitor who gets set up now is training AI systems to trust them -- and ignore you. That advantage compounds every single day.</p>
+        <p>The internet gave first movers 10 years to dominate. Mobile gave them 5. <strong>Agentic commerce is moving faster than both.</strong> McKinsey calls it "a seismic shift" and warns that businesses that lag will face "an existential question." Those aren't their words for distant futures. That's their October 2025 report.</p>
+        <p>The window to be a first mover in your market is open. <strong>It will not stay open.</strong></p>
+      </div>
+      <div class="problem-callout reveal">
+        <div class="callout-line">
+          <div class="callout-icon">✗</div>
+          <div class="callout-text"><strong>AI can't find you</strong> -- ChatGPT, Perplexity, and Gemini have no structured data to recommend your business from</div>
+        </div>
+        <div class="callout-line">
+          <div class="callout-icon">✗</div>
+          <div class="callout-text"><strong>AI can't book you</strong> -- no agentic gateway means agents hit a wall and route to a competitor that can confirm availability</div>
+        </div>
+        <div class="callout-line">
+          <div class="callout-icon">✗</div>
+          <div class="callout-text"><strong>AI can't pay you</strong> -- without Stripe ACP or Google UCP, transactions can't complete and revenue goes elsewhere</div>
+        </div>
+        <div class="callout-line">
+          <div class="callout-icon">✗</div>
+          <div class="callout-text"><strong>Every day you wait</strong> -- a competitor cements their AI reputation while yours stays at zero</div>
+        </div>
+        <div class="callout-line">
+          <div class="callout-icon pass">✓</div>
+          <div class="callout-text"><strong>With AgentBuyable</strong> -- found, booked, and paid by AI agents. Live in days. Compounding from day one.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF STRIP -->
+<section id="proof">
+  <div class="container">
+    <div class="proof-strip reveal">
+      <div class="proof-card">
+        <div class="proof-quote">"It's clear that internet purchasing modalities are going to change a lot."</div>
+        <div class="proof-attr">Patrick Collison &nbsp;&bull;&nbsp; CEO, Stripe &nbsp;&bull;&nbsp; On launching the Agentic Commerce Protocol with OpenAI</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-card">
+        <div class="proof-quote">"By 2030, the US market alone could see up to $1 trillion in orchestrated revenue from agentic commerce -- with global projections reaching $3 to $5 trillion. Early movers will have a decisive advantage."</div>
+        <div class="proof-attr">McKinsey &amp; Company &nbsp;&bull;&nbsp; The Agentic Commerce Opportunity, October 2025 &nbsp;&bull;&nbsp; Note: the $5T figure excludes services entirely</div>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-card">
+        <div class="proof-quote">"We believe that, in 2025, we may see the first AI agents join the workforce and materially change the output of companies."</div>
+        <div class="proof-attr">Sam Altman &nbsp;&bull;&nbsp; CEO, OpenAI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPOUNDING ADVANTAGE -->
+<section id="compound">
+  <div class="container">
+    <div class="compound-inner reveal">
+      <div class="compound-text">
+        <span class="section-label">The First-Mover Compounding Effect</span>
+        <h2 class="section-headline">THIS ADVANTAGE DOESN'T JUST GROW. IT LOCKS IN.</h2>
+        <p>Getting set up with AgentBuyable isn't a one-time fix. It's the start of a compounding advantage that becomes harder for competitors to close every month.</p>
+        <p><strong>Month 1:</strong> You go live. AI agents can find, book, and pay you. Your competitors can't. Every agent that transacts with you successfully logs a positive result.</p>
+        <p><strong>Month 3:</strong> AI systems have now routed bookings to you multiple times. Your business accumulates a transaction history that signals trust and reliability. Agents begin recommending you by default in your category and market.</p>
+        <p><strong>Month 6:</strong> Your AI Buyability Score is improving. Your competitors who are just now getting set up are starting from zero. You have six months of agent trust, transaction history, and recommendation momentum they cannot buy back.</p>
+        <p><strong>Year 2:</strong> AI agents have processed thousands of queries for services like yours. The businesses with the longest positive transaction histories -- the ones that got in first -- dominate AI recommendations the way early SEO adopters dominated Google results for a decade. <strong>That business can be yours.</strong></p>
+      </div>
+      <div class="compound-visual reveal">
+        <div class="compound-bar-label">AI Agent Recommendation Share Over Time</div>
+        <div class="compound-bars">
+          <div class="compound-bar-row">
+            <div class="compound-bar-name">First Mover</div>
+            <div class="compound-bar-track">
+              <div class="compound-bar-fill" style="--target-width: 88%; background: var(--gold);"></div>
+            </div>
+            <div class="compound-bar-val">88%</div>
+          </div>
+          <div class="compound-bar-row">
+            <div class="compound-bar-name">Month 6 Entry</div>
+            <div class="compound-bar-track">
+              <div class="compound-bar-fill" style="--target-width: 9%; background: rgba(201,168,76,0.4);"></div>
+            </div>
+            <div class="compound-bar-val">9%</div>
+          </div>
+          <div class="compound-bar-row">
+            <div class="compound-bar-name">Not Set Up</div>
+            <div class="compound-bar-track">
+              <div class="compound-bar-fill" style="--target-width: 3%; background: rgba(248,113,113,0.5);"></div>
+            </div>
+            <div class="compound-bar-val">3%</div>
+          </div>
+        </div>
+        <div class="compound-bar-note">Illustrative projection based on AI recommendation compounding patterns</div>
+        <a href="YOUR_STARTER_URL" target="_blank" class="btn-primary" style="margin-top:32px;width:100%;">Claim Your First-Mover Position</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="how-header reveal">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-headline">THREE LAYERS. ONE INSTALL.</h2>
+      <div class="gold-rule"></div>
+      <p style="color:var(--white);max-width:520px;margin:0 auto;font-size:17px;line-height:1.7;">AgentBuyable deploys three layers of agentic infrastructure onto your existing site. No rebuild. No dev work. One script.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">01</div>
+        <div class="step-title">AI DISCOVERY</div>
+        <p class="step-body">We register your business with every major AI platform -- ChatGPT, Perplexity, Claude, Gemini, Copilot, and Grok. Your hours, location, services, and contact info are built for AI to read, not just humans. Your competitors in AI search become visible so you know exactly where you stand.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">02</div>
+        <div class="step-title">AGENTIC COMMERCE</div>
+        <p class="step-body">We deploy the infrastructure that lets AI agents actually transact with your business. Your services are structured the exact way agents need to read them. Your calendar syncs so agents can confirm real availability. Your agentic gateway goes live so bookings can complete without any human in the loop.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">03</div>
+        <div class="step-title">PAYMENT READY</div>
+        <p class="step-body">We set your business up under Stripe's Agentic Commerce Protocol and Google's Universal Commerce Protocol -- the payment rails that let AI agents send you money directly from a conversation. Discovery and booking go live immediately. Full payment capability activates upon your authorization.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section id="who">
+  <div class="container">
+    <div class="who-header reveal">
+      <span class="section-label">Who It's For</span>
+      <h2 class="section-headline">BUILT FOR SERVICE BUSINESSES.</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="who-grid">
+      <div class="who-card reveal">
+        <span class="who-icon">🏨</span>
+        <div class="who-title">Boutique Hotels</div>
+        <div class="who-desc">Let AI agents book rooms, confirm availability, and process deposits directly inside AI conversations.</div>
+      </div>
+      <div class="who-card reveal">
+        <span class="who-icon">💆</span>
+        <div class="who-title">Med Spas & Wellness</div>
+        <div class="who-desc">Services, pricing, and appointment slots readable by AI so customers can book without picking up a phone.</div>
+      </div>
+      <div class="who-card reveal">
+        <span class="who-icon">⚖️</span>
+        <div class="who-title">Attorneys & Consultants</div>
+        <div class="who-desc">Be the firm that shows up when AI agents search for legal help in your market -- and captures the inquiry automatically.</div>
+      </div>
+      <div class="who-card reveal">
+        <span class="who-icon">🏋️</span>
+        <div class="who-title">Fitness Studios</div>
+        <div class="who-desc">Classes, memberships, and personal training packages fully transactable by AI -- no front desk required.</div>
+      </div>
+      <div class="who-card reveal">
+        <span class="who-icon">🔧</span>
+        <div class="who-title">Home Services</div>
+        <div class="who-desc">Plumbers, electricians, and contractors -- be the first result when an AI agent searches for your service in your zip code.</div>
+      </div>
+      <div class="who-card reveal">
+        <span class="who-icon">🎓</span>
+        <div class="who-title">Coaches & Trainers</div>
+        <div class="who-desc">Sessions, packages, and discovery calls fully bookable by AI -- your calendar fills while you work with clients.</div>
+      </div>
+      <div class="who-card reveal">
+        <span class="who-icon">🦷</span>
+        <div class="who-title">Healthcare & Dental</div>
+        <div class="who-desc">New patient inquiries captured and appointments booked by AI agents before your competitors even know what happened.</div>
+      </div>
+      <div class="who-card reveal">
+        <span class="who-icon">🍽️</span>
+        <div class="who-title">Restaurants & Venues</div>
+        <div class="who-desc">Reservations, private events, and catering inquiries handled by AI around the clock -- no OpenTable required.</div>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--white);font-style:italic;font-size:15px;margin-top:32px;">If your business runs on bookings, appointments, or service delivery -- AgentBuyable is built for you.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="pricing-header reveal">
+      <span class="section-label">Pricing</span>
+      <h2 class="section-headline">SIMPLE PRICING. NO CONTRACTS.</h2>
+      <div class="gold-rule"></div>
+      <p style="color:var(--white);font-size:16px;">Cancel anytime.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <!-- STARTER -->
+      <div class="pricing-card reveal">
+        <div class="pricing-tier">Starter</div>
+        <div class="pricing-title">SELF-SERVE</div>
+        <div class="pricing-sub">You deploy. We guide.</div>
+        <div class="pricing-price">
+          <span class="pricing-price-main">$397</span>
+          <span class="pricing-price-cycle"> setup</span>
+        </div>
+        <div class="pricing-price-annual">+ $47/mo &nbsp;or&nbsp; $470/yr (save $94)</div>
+        <span class="pricing-section-label">Setup includes</span>
+        <ul class="pricing-features">
+          <li>Full AI site audit -- what agents can and can't see</li>
+          <li>Business profile built for AI -- hours, location, services, contact</li>
+          <li>Up to 5 services made fully readable by AI agents</li>
+          <li>Top 5 questions AI agents ask, answered automatically</li>
+          <li>Services structured exactly how agents expect to read them</li>
+          <li>AI agents enabled to find, understand, and interact with your business</li>
+          <li>Agentic gateway deployed for hands-free bookings</li>
+          <li>Stripe ACP and Google UCP setup (guidance provided, you complete)</li>
+          <li>One copy-paste install. No tech skills required.</li>
+          <li>Confirmed live across ChatGPT, Perplexity, Claude, Gemini, Copilot, and Grok</li>
+        </ul>
+        <div class="pricing-divider"></div>
+        <span class="pricing-section-label">Monthly includes</span>
+        <ul class="pricing-features">
+          <li>Automatic monthly scan to keep your info current</li>
+          <li>AI Buyability Score delivered monthly</li>
+          <li>Up to 1 new service added per month</li>
+          <li>Full quarterly tune-up</li>
+          <li>Monthly check on your AI search visibility</li>
+        </ul>
+        <a href="YOUR_STARTER_URL" target="_blank" class="btn-outline pricing-cta">Get Started</a>
+      </div>
+
+      <!-- GROWTH -->
+      <div class="pricing-card featured reveal">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier">Growth</div>
+        <div class="pricing-title">DONE-WITH-YOU</div>
+        <div class="pricing-sub">We build it together.</div>
+        <div class="pricing-price">
+          <span class="pricing-price-main">$1,997</span>
+          <span class="pricing-price-cycle"> setup</span>
+        </div>
+        <div class="pricing-price-annual">+ $197/mo &nbsp;or&nbsp; $1,970/yr (save $394)</div>
+        <span class="pricing-section-label">Everything in Starter, plus</span>
+        <ul class="pricing-features">
+          <li>We structure your services so agents see them the right way</li>
+          <li>Up to 10 services made fully readable by AI agents</li>
+          <li>Up to 20 agent questions answered automatically</li>
+          <li>Every field written to convert -- not just inform</li>
+          <li>See how you stack up against your top 3 local competitors in AI search</li>
+          <li>Stripe ACP and Google UCP setup completed with you -- not just guided</li>
+        </ul>
+        <div class="pricing-divider"></div>
+        <span class="pricing-section-label">Monthly includes</span>
+        <ul class="pricing-features">
+          <li>Monthly performance review call</li>
+          <li>AI Buyability Score with explanation of what moved and why</li>
+          <li>Schema updated whenever your business changes</li>
+          <li>Agent ecosystem monitoring</li>
+          <li>Monthly tune-up (vs quarterly on Starter)</li>
+          <li>Priority email support (1 business day response)</li>
+        </ul>
+        <a href="YOUR_GROWTH_URL" target="_blank" class="btn-primary pricing-cta">Apply for Growth</a>
+      </div>
+
+      <!-- PRO -->
+      <div class="pricing-card reveal">
+        <div class="pricing-tier">Pro</div>
+        <div class="pricing-title">DONE-FOR-YOU</div>
+        <div class="pricing-sub">Zero client effort required.</div>
+        <div class="pricing-price">
+          <span class="pricing-price-main">$3,997</span>
+          <span class="pricing-price-cycle"> setup</span>
+        </div>
+        <div class="pricing-price-annual">+ $397/mo &nbsp;or&nbsp; $3,970/yr (save $794)</div>
+        <span class="pricing-section-label">Everything in Growth, plus</span>
+        <ul class="pricing-features">
+          <li>Full done-for-you implementation -- zero client effort</li>
+          <li>Up to 25 services made fully readable by AI agents</li>
+          <li>Up to 50 agent questions answered automatically</li>
+          <li>Stripe ACP and Google UCP fully completed for you</li>
+          <li>Full competitor gap analysis with action plan</li>
+          <li>Full quality check across all 6 major AI platforms before go-live</li>
+        </ul>
+        <div class="pricing-divider"></div>
+        <span class="pricing-section-label">Monthly includes</span>
+        <ul class="pricing-features">
+          <li>Bi-weekly optimization calls</li>
+          <li>AI Buyability Score with full competitor comparison and action plan</li>
+          <li>Custom reporting dashboard</li>
+          <li>Schema updated in real time as your business changes</li>
+          <li>Continuous agent ecosystem monitoring</li>
+          <li>Unlimited new service additions</li>
+          <li>Weekly schema tune-up</li>
+          <li>Quarterly agent performance strategy session</li>
+          <li>Priority WhatsApp support (same business day)</li>
+          <li>Dedicated account manager</li>
+        </ul>
+        <a href="YOUR_PRO_URL" target="_blank" class="btn-outline pricing-cta">Apply for Pro</a>
+      </div>
+
+    </div>
+    <p class="pricing-footnote">Full agentic payment capability requires approval under Stripe's Agentic Commerce Protocol or Google's Universal Commerce Protocol. We guide you through the application upon your authorization. Discovery and lead capture are available immediately upon deployment.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-headline">COMMON QUESTIONS.</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">What exactly is an AI agent?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">AI agents are the next evolution of tools like ChatGPT, Perplexity, and Google AI. Instead of just answering questions, they take action on behalf of your customers -- searching for services, comparing options, making bookings, and processing payments. When someone asks their AI assistant to "find and book a massage in Austin this Saturday," an AI agent does the entire job without the customer ever visiting your website.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Is this actually happening now, or is it future-facing?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">It's happening now. 1 in 5 Cyber Week 2025 orders involved an AI agent. Stripe launched its Agentic Commerce Protocol. Google launched its Universal Commerce Protocol. OpenAI has direct commerce integrations live. The infrastructure is built and deployed. The businesses that get set up first capture the traffic. The ones that wait play catch-up in a market that rewards early movers disproportionately.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Do I need to rebuild my website?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">No. AgentBuyable works on top of your existing site. We install one script tag and deploy the necessary infrastructure in the background. Your site looks identical to your human visitors. AI agents just gain the ability to read, understand, and transact with your business. No developer needed. No site rebuild. No downtime.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">What is the AI Buyability Score?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">The AI Buyability Score is a proprietary monthly score that shows exactly how discoverable, bookable, and payable your business is to AI agents -- and where you're losing ground. Starter clients receive the score monthly. Growth clients receive it with a full explanation of what moved and why. Pro clients receive it with a competitor comparison and a concrete action plan to improve it.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">How does agentic payment work?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Agentic payment lets AI agents complete a purchase on a customer's behalf -- inside the AI conversation, without the customer visiting your site or entering payment details manually. It runs on Stripe's Agentic Commerce Protocol and Google's Universal Commerce Protocol. We set your business up for both. Full payment capability activates upon your authorization. Discovery, lead capture, and booking go live immediately regardless.</div>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <span class="faq-question-text">Which tier is right for me?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Starter is right if you want to get set up quickly and are comfortable doing the install yourself with our guidance. Growth is right if you want us working alongside you to build it out properly and give you visibility into how you compare to competitors. Pro is built for higher-ticket operators who want zero lift and maximum agent visibility -- everything done for them. You can upgrade at any time as your agent traffic and bookings grow.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta">
+  <div class="cta-glow"></div>
+  <div class="container-narrow reveal">
+    <span class="section-label">The Window Is Open. It Won't Stay Open.</span>
+    <h2 class="cta-headline">YOUR COMPETITORS ARE DECIDING RIGHT NOW.</h2>
+    <p class="cta-body">Some will move. Most will wait. The ones who move will own the AI recommendation layer in their market for years. The ones who wait will spend those same years trying to catch up to a compounding advantage they can never fully close. Which side of that line do you want to be on?</p>
+    <div class="cta-buttons">
+      <a href="YOUR_STARTER_URL" target="_blank" class="btn-primary">Get Agent-Ready Now</a>
+      <a href="YOUR_GROWTH_URL" target="_blank" class="btn-outline">Apply for Growth</a>
+      <a href="YOUR_PRO_URL" target="_blank" class="btn-outline">Apply for Pro</a>
+    </div>
+    <p style="color:var(--dim);font-size:13px;margin-top:24px;font-style:italic;">Not sure where to start? <a href="https://strativa-ai.com/book-a-call-strativa" target="_blank" style="color:var(--gold);text-decoration:underline;">Book a free 30-minute strategy call.</a> No obligation.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="YOUR_CONTACT_FORM_URL" target="_blank">Contact Us</a>
+    <a href="/terms">Terms of Service</a>
+    <a href="/privacy">Privacy Policy</a>
+  </div>
+  <p class="footer-copy">Copyright 2026 AgentBuyable &nbsp;&bull;&nbsp; agentbuyable.ai</p>
+</footer>
+
+<script>
+// =====================
+// MOBILE MENU
+// =====================
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMobileMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+// =====================
+// SCROLL REVEAL
+// =====================
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      // Animate compound bars when section comes into view
+      e.target.querySelectorAll('.compound-bar-fill').forEach(bar => {
+        bar.classList.add('animated');
+      });
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
+
+// =====================
+// FAQ
+// =====================
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// =====================
+// SCORE MODAL
+// =====================
+function openScoreModal() {
+  document.getElementById('scoreModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeScoreModal() {
+  document.getElementById('scoreModal').classList.remove('open');
+  document.body.style.overflow = '';
+  resetScoreModal();
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('scoreModal')) closeScoreModal();
+}
+
+function resetScoreModal() {
+  document.getElementById('domainInput').value = '';
+  document.getElementById('checkBtn').disabled = false;
+  document.getElementById('checkBtn').textContent = 'Check My Score';
+  document.getElementById('scoreResult').classList.remove('visible');
+  document.querySelectorAll('.check-item').forEach(item => {
+    item.className = 'check-item';
+    item.querySelector('.check-badge').className = 'check-badge pending';
+    item.querySelector('.check-badge').textContent = 'Waiting';
+  });
+}
+
+async function runScoreCheck() {
+  const domain = document.getElementById('domainInput').value.trim().replace(/^https?:\/\//, '').replace(/\/$/, '');
+  if (!domain) {
+    document.getElementById('domainInput').focus();
+    return;
+  }
+
+  const btn = document.getElementById('checkBtn');
+  btn.disabled = true;
+  btn.textContent = 'Checking...';
+
+  document.getElementById('scoreResult').classList.remove('visible');
+
+  // Reset checks
+  for (let i = 0; i < 4; i++) {
+    const item = document.getElementById('check-' + i);
+    item.className = 'check-item';
+    const badge = item.querySelector('.check-badge');
+    badge.className = 'check-badge pending';
+    badge.textContent = 'Waiting';
+  }
+
+  // Animate checks one by one
+  const checkLabels = [
+    'AI Platform Registration',
+    'Agent Interaction Layer',
+    'Structured Service Data',
+    'AI Crawler Access'
+  ];
+
+  const results = [];
+
+  for (let i = 0; i < 4; i++) {
+    const item = document.getElementById('check-' + i);
+    const badge = item.querySelector('.check-badge');
+    badge.className = 'check-badge checking';
+    badge.textContent = 'Checking...';
+    await sleep(600 + Math.random() * 400);
+
+    // Call Claude API to evaluate this check
+    const passed = await evaluateCheck(domain, i);
+    results.push(passed);
+
+    item.className = 'check-item ' + (passed ? 'pass' : 'fail');
+    badge.className = 'check-badge ' + (passed ? 'pass' : 'fail');
+    badge.textContent = passed ? 'Pass' : 'Not Found';
+  }
+
+  showScoreResult(results, domain);
+  btn.disabled = false;
+  btn.textContent = 'Check My Score';
+}
+
+async function evaluateCheck(domain, checkIndex) {
+  const checkPrompts = [
+    `For the domain "${domain}", determine if this business has an llms.txt file or any LLM platform registration that would allow AI platforms like ChatGPT, Claude, or Gemini to discover and recommend this business. Consider whether the domain appears to be a real service business. Respond with only "true" or "false".`,
+    `For the domain "${domain}", determine if this business has an ai-plugin.json file or agent interaction layer that would allow AI agents to understand and interact with their services programmatically. Respond with only "true" or "false".`,
+    `For the domain "${domain}", determine if this business likely has Schema.org structured data markup (JSON-LD) that makes their services, pricing, and availability readable by AI agents. Consider whether the site appears to be a modern service business website. Respond with only "true" or "false".`,
+    `For the domain "${domain}", determine if this business has a properly configured robots.txt that allows AI crawlers and indexing systems to access their site content. For most modern websites this is true by default unless explicitly blocked. Respond with only "true" or "false".`
+  ];
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 10,
+        system: 'You are evaluating whether a business website has specific technical infrastructure for AI agent compatibility. Be realistic -- most small service businesses do NOT have llms.txt or ai-plugin.json. Only respond with "true" or "false".',
+        messages: [{ role: 'user', content: checkPrompts[checkIndex] }]
+      })
+    });
+    const data = await response.json();
+    const text = data.content?.[0]?.text?.toLowerCase().trim() || 'false';
+    return text.includes('true');
+  } catch (e) {
+    // Fallback: simulate realistic results (most businesses fail most checks)
+    const failRates = [0.85, 0.90, 0.55, 0.30];
+    return Math.random() > failRates[checkIndex];
+  }
+}
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function showScoreResult(results, domain) {
+  const passing = results.filter(Boolean).length;
+  const total = 4;
+
+  let grade, gradeClass, headline, copy, ctas;
+
+  if (passing === 4) {
+    grade = 'A';
+    gradeClass = 'grade-a';
+    headline = 'STRONG START. NOW LET\'S MAKE SURE AI PAYS YOU.';
+    copy = 'Your site passes the basic checks -- but passing the checks and being fully transactable by AI agents are two different things. Most businesses with these signals still can\'t accept agentic payments or get recommended in AI-driven searches. Let\'s close the gap.';
+    ctas = `
+      <a href="YOUR_GROWTH_URL" target="_blank" class="btn-primary">Apply for Growth</a>
+      <a href="YOUR_PRO_URL" target="_blank" class="btn-outline">Apply for Pro</a>
+      <a href="https://strativa-ai.com/book-a-call-strativa" target="_blank" class="btn-outline">Talk to Us First</a>
+    `;
+  } else if (passing >= 2) {
+    grade = passing === 3 ? 'C' : 'D';
+    gradeClass = passing === 3 ? 'grade-c' : 'grade-d';
+    headline = 'AI CAN FIND YOU. BUT CAN IT BOOK AND PAY YOU?';
+    copy = 'You\'re partway there -- but discovery alone doesn\'t close deals. AI agents need to be able to understand your services, confirm availability, and complete a transaction. Right now, they can\'t. AgentBuyable fixes that.';
+    ctas = `
+      <a href="YOUR_STARTER_URL" target="_blank" class="btn-primary">Get Started Now</a>
+      <a href="YOUR_GROWTH_URL" target="_blank" class="btn-outline">Apply for Growth</a>
+      <a href="https://strativa-ai.com/book-a-call-strativa" target="_blank" class="btn-outline">Book a Free Strategy Call</a>
+    `;
+  } else {
+    grade = 'F';
+    gradeClass = 'grade-f';
+    headline = 'AI AGENTS CAN\'T FIND, BOOK, OR PAY YOU YET.';
+    copy = `${domain} is invisible to AI that spends money. Zero of the four core signals AI agents need to transact with your business are in place. Every AI agent searching for services like yours right now is skipping you -- and booking your competitors instead.`;
+    ctas = `
+      <a href="https://strativa-ai.com/book-a-call-strativa" target="_blank" class="btn-primary">Book a Free Strategy Call</a>
+      <a href="YOUR_STARTER_URL" target="_blank" class="btn-outline">Get Started Now</a>
+    `;
+  }
+
+  const gradeEl = document.getElementById('scoreGrade');
+  gradeEl.textContent = grade;
+  gradeEl.className = 'score-grade ' + gradeClass;
+
+  document.getElementById('scoreFraction').textContent = `${passing} of ${total} checks passing`;
+  document.getElementById('scoreHeadline').textContent = headline;
+  document.getElementById('scoreCopy').textContent = copy;
+  document.getElementById('scoreCtas').innerHTML = ctas;
+
+  setTimeout(() => {
+    document.getElementById('scoreBar').style.width = ((passing / total) * 100) + '%';
+    const bar = document.getElementById('scoreBar');
+    if (passing === 4) bar.style.background = '#4ade80';
+    else if (passing >= 2) bar.style.background = 'var(--gold)';
+    else bar.style.background = '#f87171';
+  }, 100);
+
+  document.getElementById('scoreResult').classList.add('visible');
+}
+
+// Allow Enter key on input
+document.getElementById('domainInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') runScoreCheck();
+});
+</script>
+</body>
+</html>

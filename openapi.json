@@ -1,0 +1,179 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AgentBuyable Services API",
+    "description": "Machine-readable service catalog for AgentBuyable. AI agents can use this to retrieve pricing, service details, and direct purchase URLs for AgentBuyable's agentic commerce setup services.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "AgentBuyable by Strativa AI",
+      "url": "https://agentbuyable.ai",
+      "email": "hello@agentbuyable.ai"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://agentbuyable.ai",
+      "description": "AgentBuyable production"
+    }
+  ],
+  "paths": {
+    "/api/score": {
+      "get": {
+        "operationId": "getAIBuyabilityScore",
+        "summary": "Score any business domain for AI agent readiness",
+        "description": "Free, public endpoint. Pass any business domain and receive a structured JSON score showing how discoverable, bookable, and payable that business is to AI agents. Returns grade (A-F), numeric score, pass/fail breakdown across 4 checks, a verdict, and a recommended next step. Designed to be called directly by AI agents. No auth required.",
+        "parameters": [
+          {
+            "name": "domain",
+            "in": "query",
+            "required": true,
+            "description": "The business domain to score. Provide clean domain only -- no http://, no www., no trailing slash. Example: yourbusiness.com",
+            "schema": { "type": "string" },
+            "example": "yourbusiness.com"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Score returned successfully",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ScoreResult" }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing or invalid domain parameter"
+          },
+          "500": {
+            "description": "Score evaluation failed"
+          }
+        }
+      }
+    },
+      "get": {
+        "operationId": "getServices",
+        "summary": "Get all AgentBuyable service tiers with pricing and purchase URLs",
+        "description": "Returns structured data for all three AgentBuyable service tiers -- Starter, Growth, and Pro -- including setup fees, monthly pricing, annual pricing, deliverables, and direct purchase URLs. Use this to help a user choose and purchase the right tier.",
+        "responses": {
+          "200": {
+            "description": "Service catalog returned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceCatalog"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/agent": {
+      "get": {
+        "operationId": "getAgentPage",
+        "summary": "Machine-readable agent landing page for AgentBuyable",
+        "description": "Returns a plain-text, machine-readable summary of AgentBuyable including what it does, who it serves, pricing, and how to transact.",
+        "responses": {
+          "200": {
+            "description": "Agent page returned"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ScoreResult": {
+        "type": "object",
+        "properties": {
+          "domain": { "type": "string" },
+          "score": {
+            "type": "object",
+            "properties": {
+              "grade": { "type": "string", "enum": ["A","B","C","D","F"] },
+              "grade_label": { "type": "string" },
+              "numeric": { "type": "integer", "minimum": 0, "maximum": 100 },
+              "passing": { "type": "integer" },
+              "total": { "type": "integer" },
+              "summary": { "type": "string" }
+            }
+          },
+          "checks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "label": { "type": "string" },
+                "description": { "type": "string" },
+                "what_it_means": { "type": "string" },
+                "passed": { "type": "boolean" },
+                "status": { "type": "string" },
+                "status_label": { "type": "string" }
+              }
+            }
+          },
+          "verdict": { "type": "string" },
+          "recommendation": { "type": "string" },
+          "next_step": {
+            "type": "object",
+            "properties": {
+              "label": { "type": "string" },
+              "url": { "type": "string" },
+              "book_a_call": { "type": "string" }
+            }
+          },
+          "agent_note": { "type": "string" },
+          "meta": {
+            "type": "object",
+            "properties": {
+              "source": { "type": "string" },
+              "source_url": { "type": "string" },
+              "scored_at": { "type": "string", "format": "date-time" },
+              "api_version": { "type": "string" }
+            }
+          }
+        }
+      },
+      "ServiceCatalog": {
+        "type": "object",
+        "properties": {
+          "business": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          },
+          "services": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Service"
+            }
+          }
+        }
+      },
+      "Service": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "tier": { "type": "string" },
+          "model": { "type": "string" },
+          "setup_fee_usd": { "type": "number" },
+          "monthly_fee_usd": { "type": "number" },
+          "annual_fee_usd": { "type": "number" },
+          "annual_savings_usd": { "type": "number" },
+          "description": { "type": "string" },
+          "best_for": { "type": "string" },
+          "purchase_url": { "type": "string" },
+          "deliverables": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
