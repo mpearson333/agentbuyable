@@ -1,10 +1,58 @@
 {
   "functions": {
     "api/score.js": {
+      "runtime": "nodejs20.x",
       "memory": 256,
       "maxDuration": 15
     }
   },
+  "routes": [
+    {
+      "src": "/api/score",
+      "dest": "/api/score.js"
+    },
+    {
+      "src": "/agent",
+      "dest": "/agent.html"
+    },
+    {
+      "src": "/api/services.json",
+      "dest": "/api/services.json"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/ai-plugin.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/openapi.json",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
+}
+
   "routes": [
     {
       "src": "/api/score",
