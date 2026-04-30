@@ -620,10 +620,19 @@ section { position: relative; }
   color: var(--white);
 }
 
-.check-sublabel {
-  font-size: 12px;
-  color: var(--white);
-  margin-top: 2px;
+.check-critical {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--gold-dim);
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 2px 7px;
+  border-radius: 999px;
+  margin-left: 8px;
+  vertical-align: middle;
 }
 
 .check-badge {
@@ -1521,15 +1530,15 @@ footer {
     <div class="checks-list" id="checksList">
       <div class="check-item" id="check-0">
         <div>
-          <div class="check-label">AI Platform Registration</div>
-          <div class="check-sublabel">Can ChatGPT, Claude, and Gemini find your business?</div>
+          <div class="check-label">Agent Interaction Layer <span class="check-critical">Most Critical</span></div>
+          <div class="check-sublabel">Can AI agents actually transact with your business? This is the check almost no one passes.</div>
         </div>
         <span class="check-badge pending">Waiting</span>
       </div>
       <div class="check-item" id="check-1">
         <div>
-          <div class="check-label">Agent Interaction Layer</div>
-          <div class="check-sublabel">Can AI agents understand and interact with your services?</div>
+          <div class="check-label">AI Platform Registration</div>
+          <div class="check-sublabel">Can ChatGPT, Claude, and Gemini find your business?</div>
         </div>
         <span class="check-badge pending">Waiting</span>
       </div>
@@ -1583,11 +1592,11 @@ footer {
       <div class="problem-callout reveal">
         <div class="callout-line">
           <div class="callout-icon">✗</div>
-          <div class="callout-text"><strong>AI can't find you</strong> -- ChatGPT, Perplexity, and Gemini have no structured data to recommend your business from</div>
+          <div class="callout-text"><strong>No Agent Interaction Layer -- the most critical gap.</strong> This is the one check almost no business passes. Without it, AI agents hit a wall and route to a competitor that can transact.</div>
         </div>
         <div class="callout-line">
           <div class="callout-icon">✗</div>
-          <div class="callout-text"><strong>AI can't book you</strong> -- no agentic gateway means agents hit a wall and route to a competitor that can confirm availability</div>
+          <div class="callout-text"><strong>No AI platform registration</strong> -- ChatGPT, Perplexity, and Gemini have no structured data to recommend your business from</div>
         </div>
         <div class="callout-line">
           <div class="callout-icon">✗</div>
