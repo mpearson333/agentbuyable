@@ -402,26 +402,77 @@ section { position: relative; }
   margin-bottom: 60px;
 }
 
-.hero-score-trigger {
+.score-hero-wrapper {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  color: var(--gold);
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 14px 0;
-  text-decoration: underline;
-  text-decoration-color: rgba(201,168,76,0.4);
-  text-underline-offset: 4px;
+  max-width: 520px;
 }
 
-.hero-score-trigger:hover { text-decoration-color: var(--gold); }
+.score-hero-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.score-hero-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2.5vw, 26px);
+  letter-spacing: 0.06em;
+  padding: 18px 32px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0 0 24px rgba(201,168,76,0.15), inset 0 0 24px rgba(201,168,76,0.04);
+  animation: score-pulse 3s ease-in-out infinite;
+}
+
+@keyframes score-pulse {
+  0%, 100% { box-shadow: 0 0 24px rgba(201,168,76,0.15), inset 0 0 24px rgba(201,168,76,0.04); }
+  50% { box-shadow: 0 0 40px rgba(201,168,76,0.35), inset 0 0 32px rgba(201,168,76,0.08); }
+}
+
+.score-hero-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-2px);
+  animation: none;
+}
+
+.score-hero-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.score-hero-arrow {
+  margin-left: auto;
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+
+.score-hero-btn:hover .score-hero-arrow {
+  transform: translateX(4px);
+}
+
+.score-hero-sub {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+  max-width: 440px;
+}
 
 .hero-stats {
   display: flex;
@@ -1428,10 +1479,15 @@ footer {
     </h1>
     <p class="hero-sub reveal">AI agents don't browse. They decide, book, and pay -- in seconds. Every business already set up captures that revenue. Every business that isn't gets skipped. Permanently.</p>
     <div class="hero-ctas reveal">
-      <a href="YOUR_STARTER_URL" target="_blank" class="btn-primary">Get Agent-Ready Now</a>
-      <button class="hero-score-trigger" onclick="openScoreModal()">
-        → Check Your Free AI Buyability Score
-      </button>
+      <div class="score-hero-wrapper">
+        <div class="score-hero-label">Free. Instant. No signup required.</div>
+        <button class="score-hero-btn" onclick="openScoreModal()">
+          <span class="score-hero-icon">⚡</span>
+          Check Your Free AI Buyability Score
+          <span class="score-hero-arrow">→</span>
+        </button>
+        <div class="score-hero-sub">See exactly where AI agents can and can't find, book, or pay your business right now.</div>
+      </div>
     </div>
     <div class="hero-stats reveal">
       <div>
@@ -1705,9 +1761,9 @@ footer {
   <div class="container">
     <div class="pricing-header reveal">
       <span class="section-label">Pricing</span>
-      <h2 class="section-headline">SIMPLE PRICING. NO CONTRACTS.</h2>
+      <h2 class="section-headline">ONE INVESTMENT. MONTHLY PROOF.</h2>
       <div class="gold-rule"></div>
-      <p style="color:var(--white);font-size:16px;">Cancel anytime.</p>
+      <p style="color:var(--white);font-size:17px;max-width:600px;margin:0 auto;line-height:1.7;">The one-time buildout builds your AI infrastructure. The monthly optimization keeps it optimized, measured, and ahead of your market. No contracts. Cancel anytime.</p>
     </div>
     <div class="pricing-grid">
 
@@ -1715,33 +1771,31 @@ footer {
       <div class="pricing-card reveal">
         <div class="pricing-tier">Starter</div>
         <div class="pricing-title">SELF-SERVE</div>
-        <div class="pricing-sub">You deploy. We guide.</div>
+        <div class="pricing-sub">Your AI infrastructure, built and live. Then $47/mo to keep it optimized.</div>
         <div class="pricing-price">
           <span class="pricing-price-main">$397</span>
-          <span class="pricing-price-cycle"> setup</span>
+          <span class="pricing-price-cycle"> one-time buildout</span>
         </div>
-        <div class="pricing-price-annual">+ $47/mo &nbsp;or&nbsp; $470/yr (save $94)</div>
-        <span class="pricing-section-label">Setup includes</span>
+        <div class="pricing-price-annual">then $47/mo &nbsp;or&nbsp; $470/yr (save $94)</div>
+        <span class="pricing-section-label">Your buildout includes</span>
         <ul class="pricing-features">
-          <li>Full AI site audit -- what agents can and can't see</li>
+          <li>Full AI site audit -- what agents can and can't see right now</li>
           <li>Business profile built for AI -- hours, location, services, contact</li>
           <li>Up to 5 services made fully readable by AI agents</li>
-          <li>Top 5 questions AI agents ask, answered automatically</li>
-          <li>Services structured exactly how agents expect to read them</li>
-          <li>AI agents enabled to find, understand, and interact with your business</li>
+          <li>Top 5 questions AI agents ask about your business, answered automatically</li>
           <li>Agentic gateway deployed for hands-free bookings</li>
           <li>Stripe ACP and Google UCP setup (guidance provided, you complete)</li>
-          <li>One copy-paste install. No tech skills required.</li>
+          <li>One copy-paste install -- no tech skills required</li>
           <li>Confirmed live across ChatGPT, Perplexity, Claude, Gemini, Copilot, and Grok</li>
         </ul>
         <div class="pricing-divider"></div>
-        <span class="pricing-section-label">Monthly includes</span>
+        <span class="pricing-section-label">Monthly optimization earns its keep</span>
         <ul class="pricing-features">
-          <li>Automatic monthly scan to keep your info current</li>
-          <li>AI Buyability Score delivered monthly</li>
+          <li>AI Buyability Score delivered monthly -- your proof of progress</li>
+          <li>Automatic monthly scan to keep your info current as AI platforms evolve</li>
           <li>Up to 1 new service added per month</li>
-          <li>Full quarterly tune-up</li>
-          <li>Monthly check on your AI search visibility</li>
+          <li>Full quarterly infrastructure tune-up</li>
+          <li>Monthly AI search visibility check</li>
         </ul>
         <a href="YOUR_STARTER_URL" target="_blank" class="btn-outline pricing-cta">Get Started</a>
       </div>
@@ -1751,28 +1805,28 @@ footer {
         <div class="pricing-badge">Most Popular</div>
         <div class="pricing-tier">Growth</div>
         <div class="pricing-title">DONE-WITH-YOU</div>
-        <div class="pricing-sub">We build it together.</div>
+        <div class="pricing-sub">We build it together. Then $197/mo to optimize, measure, and stay ahead.</div>
         <div class="pricing-price">
           <span class="pricing-price-main">$1,997</span>
-          <span class="pricing-price-cycle"> setup</span>
+          <span class="pricing-price-cycle"> one-time buildout</span>
         </div>
-        <div class="pricing-price-annual">+ $197/mo &nbsp;or&nbsp; $1,970/yr (save $394)</div>
+        <div class="pricing-price-annual">then $197/mo &nbsp;or&nbsp; $1,970/yr (save $394)</div>
         <span class="pricing-section-label">Everything in Starter, plus</span>
         <ul class="pricing-features">
-          <li>We structure your services so agents see them the right way</li>
+          <li>We structure your services so agents see them exactly the right way</li>
           <li>Up to 10 services made fully readable by AI agents</li>
           <li>Up to 20 agent questions answered automatically</li>
           <li>Every field written to convert -- not just inform</li>
-          <li>See how you stack up against your top 3 local competitors in AI search</li>
-          <li>Stripe ACP and Google UCP setup completed with you -- not just guided</li>
+          <li>Competitor analysis -- how you stack up against your top 3 in AI search</li>
+          <li>Stripe ACP and Google UCP completed with you -- not just guided</li>
         </ul>
         <div class="pricing-divider"></div>
-        <span class="pricing-section-label">Monthly includes</span>
+        <span class="pricing-section-label">Monthly optimization earns its keep</span>
         <ul class="pricing-features">
-          <li>Monthly performance review call</li>
-          <li>AI Buyability Score with explanation of what moved and why</li>
+          <li>Monthly performance review call -- you'll know exactly what moved and why</li>
+          <li>AI Buyability Score with full explanation -- your monthly ROI report</li>
           <li>Schema updated whenever your business changes</li>
-          <li>Agent ecosystem monitoring</li>
+          <li>Agent ecosystem monitoring -- we watch the space so you don't have to</li>
           <li>Monthly tune-up (vs quarterly on Starter)</li>
           <li>Priority email support (1 business day response)</li>
         </ul>
@@ -1783,40 +1837,40 @@ footer {
       <div class="pricing-card reveal">
         <div class="pricing-tier">Pro</div>
         <div class="pricing-title">DONE-FOR-YOU</div>
-        <div class="pricing-sub">Zero client effort required.</div>
+        <div class="pricing-sub">Zero client effort. A dedicated team watching, optimizing, and reporting every month.</div>
         <div class="pricing-price">
           <span class="pricing-price-main">$3,997</span>
-          <span class="pricing-price-cycle"> setup</span>
+          <span class="pricing-price-cycle"> one-time buildout</span>
         </div>
-        <div class="pricing-price-annual">+ $397/mo &nbsp;or&nbsp; $3,970/yr (save $794)</div>
+        <div class="pricing-price-annual">then $397/mo &nbsp;or&nbsp; $3,970/yr (save $794)</div>
         <span class="pricing-section-label">Everything in Growth, plus</span>
         <ul class="pricing-features">
-          <li>Full done-for-you implementation -- zero client effort</li>
+          <li>Full done-for-you implementation -- zero lift required from your team</li>
           <li>Up to 25 services made fully readable by AI agents</li>
           <li>Up to 50 agent questions answered automatically</li>
           <li>Stripe ACP and Google UCP fully completed for you</li>
-          <li>Full competitor gap analysis with action plan</li>
+          <li>Full competitor gap analysis with prioritized action plan</li>
           <li>Full quality check across all 6 major AI platforms before go-live</li>
         </ul>
         <div class="pricing-divider"></div>
-        <span class="pricing-section-label">Monthly includes</span>
+        <span class="pricing-section-label">Monthly optimization earns its keep</span>
         <ul class="pricing-features">
-          <li>Bi-weekly optimization calls</li>
-          <li>AI Buyability Score with full competitor comparison and action plan</li>
-          <li>Custom reporting dashboard</li>
+          <li>Bi-weekly optimization calls with your dedicated account manager</li>
+          <li>AI Buyability Score with competitor comparison and action plan</li>
+          <li>Custom reporting dashboard -- your AI performance at a glance</li>
           <li>Schema updated in real time as your business changes</li>
           <li>Continuous agent ecosystem monitoring</li>
           <li>Unlimited new service additions</li>
           <li>Weekly schema tune-up</li>
           <li>Quarterly agent performance strategy session</li>
-          <li>Priority WhatsApp support (same business day)</li>
-          <li>Dedicated account manager</li>
+          <li>Priority WhatsApp support -- same business day, always</li>
+          <li>Dedicated account manager -- a real person who knows your business</li>
         </ul>
         <a href="YOUR_PRO_URL" target="_blank" class="btn-outline pricing-cta">Apply for Pro</a>
       </div>
 
     </div>
-    <p class="pricing-footnote">Full agentic payment capability requires approval under Stripe's Agentic Commerce Protocol or Google's Universal Commerce Protocol. We guide you through the application upon your authorization. Discovery and lead capture are available immediately upon deployment.</p>
+    <p class="pricing-footnote">The one-time buildout is your AI infrastructure investment -- real work, real setup, real results. The monthly optimization is how that investment compounds. Full agentic payment capability requires approval under Stripe's Agentic Commerce Protocol or Google's Universal Commerce Protocol. Discovery and lead capture go live immediately upon deployment.</p>
   </div>
 </section>
 
