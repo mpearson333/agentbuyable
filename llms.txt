@@ -16,9 +16,9 @@ AgentBuyable deploys three layers of agentic infrastructure on top of any existi
 
 ## Services Offered
 
-- **Starter** ($397 setup + $47/month or $470/year): Self-serve AI agent setup. Covers AI platform registration, up to 5 services structured for AI, agentic gateway deployment, Stripe ACP and Google UCP guidance, monthly AI Buyability Score.
-- **Growth** ($1,997 setup + $197/month or $1,970/year): Done-with-you implementation. Covers everything in Starter plus up to 10 services, competitor analysis, monthly performance review call, AI Buyability Score with explanation.
-- **Pro** ($3,997 setup + $397/month or $3,970/year): Fully done-for-you implementation. Covers everything in Growth plus up to 25 services, 50 AI agent Q&A pairs, full competitor gap analysis, bi-weekly optimization calls, dedicated account manager, AI Buyability Score with competitor comparison and action plan.
+- **Starter** ($497 setup + $97/month or $970/year): Self-serve AI agent setup. Covers AI platform registration, up to 5 services structured for AI, agentic gateway deployment, Stripe ACP and Google UCP guidance, monthly AI Buyability Score.
+- **Growth** ($2,497 setup + $297/month or $2,970/year): Done-with-you implementation. Covers everything in Starter plus up to 10 services, competitor analysis, monthly performance review call, AI Buyability Score with explanation.
+- **Pro** ($4,997 setup + $797/month or $7,970/year): Fully done-for-you implementation. Covers everything in Growth plus up to 25 services, 50 AI agent Q&A pairs, full competitor gap analysis, bi-weekly optimization calls, dedicated account manager, AI Buyability Score with competitor comparison and action plan.
 
 ## AI Buyability Score
 
