@@ -93,23 +93,16 @@
   "offers": [
     {
       "@type": "Offer",
-      "name": "Starter",
-      "description": "Self-serve AI agent setup for service businesses. One-time setup plus monthly optimization.",
-      "price": "397",
-      "priceCurrency": "USD"
-    },
-    {
-      "@type": "Offer",
       "name": "Growth",
-      "description": "Done-with-you AI agent infrastructure for service businesses.",
-      "price": "1997",
+      "description": "Done-with-you AI agent infrastructure. 10 services structured, 20 agent Q&As, agentic booking gateway, ACP/UCP completed together, monthly AI Visibility Report and performance call.",
+      "price": "1497",
       "priceCurrency": "USD"
     },
     {
       "@type": "Offer",
       "name": "Pro",
-      "description": "Fully done-for-you AI agent infrastructure for high-ticket service businesses.",
-      "price": "3997",
+      "description": "Fully done-for-you AI agent infrastructure. 25 services structured, 50 agent Q&As, top 2 competitor analysis, ACP/UCP done for you, dedicated account manager, bi-weekly calls.",
+      "price": "2997",
       "priceCurrency": "USD"
     }
   ],
@@ -1057,8 +1050,99 @@ section { position: relative; }
 }
 
 /* =====================
-   PRICING
+   USE CASES
    ===================== */
+#usecases {
+  padding: 120px 0;
+  background: var(--surface);
+  border-top: 1px solid rgba(201,168,76,0.08);
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+
+.usecase-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.usecase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.usecase-card {
+  background: var(--surface2);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  transition: border-color 0.3s;
+}
+
+.usecase-card:hover {
+  border-color: rgba(201,168,76,0.4);
+}
+
+.usecase-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--gold-dim);
+  border: 1px solid rgba(201,168,76,0.25);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.usecase-headline {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.5vw, 30px);
+  letter-spacing: 0.04em;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.usecase-story p {
+  font-size: 15px;
+  color: var(--white);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.usecase-story p strong {
+  color: var(--gold);
+}
+
+.usecase-stat {
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-top: 28px;
+}
+
+.usecase-stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.usecase-stat-label {
+  font-size: 13px;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .usecase-grid { grid-template-columns: 1fr; }
+}
 #pricing {
   padding: 120px 0;
   background: var(--surface);
@@ -1686,7 +1770,7 @@ footer {
           </div>
         </div>
         <div class="compound-bar-note">Illustrative projection based on AI recommendation compounding patterns</div>
-        <a href="YOUR_STARTER_URL" target="_blank" class="btn-primary" style="margin-top:32px;width:100%;">Claim Your First-Mover Position</a>
+        <a href="YOUR_GROWTH_URL" target="_blank" class="btn-primary" style="margin-top:32px;width:100%;">Claim Your First-Mover Position</a>
       </div>
     </div>
   </div>
@@ -1775,6 +1859,51 @@ footer {
   </div>
 </section>
 
+<!-- USE CASES -->
+<section id="usecases">
+  <div class="container">
+    <div class="usecase-header reveal">
+      <span class="section-label">Real World Impact</span>
+      <h2 class="section-headline">WHAT THIS ACTUALLY MEANS FOR YOUR BUSINESS.</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="usecase-grid">
+
+      <!-- USE CASE 1: Hotel OTA -->
+      <div class="usecase-card reveal">
+        <div class="usecase-tag">Boutique Hotels</div>
+        <h3 class="usecase-headline">STOP PAYING EXPEDIA 25% OF EVERY BOOKING.</h3>
+        <div class="usecase-story">
+          <p>A boutique hotel charging $300/night is handing $45-$75 of every single booking to Expedia, Booking.com, or Travelocity. On 100 bookings a month that's <strong>$4,500 to $7,500 leaving the business every month</strong> -- just in OTA commissions.</p>
+          <p>When an AI agent can find, book, and pay your hotel directly, that conversation never touches an OTA. The agent books direct. You keep 100% of the revenue. No commission. No middleman. No platform that owns your customer relationship.</p>
+          <p>AgentBuyable is how your hotel becomes the one AI agents book directly -- while your competitors are still paying Expedia to exist.</p>
+        </div>
+        <div class="usecase-stat">
+          <span class="usecase-stat-num">$90,000</span>
+          <span class="usecase-stat-label">in annual OTA commissions a 100-booking/mo hotel could redirect to direct revenue</span>
+        </div>
+      </div>
+
+      <!-- USE CASE 2: After Hours -->
+      <div class="usecase-card reveal">
+        <div class="usecase-tag">Every Service Business</div>
+        <h3 class="usecase-headline">YOUR NEXT CLIENT IS SEARCHING AT 11PM.</h3>
+        <div class="usecase-stat" style="margin-bottom:24px;">
+          <span class="usecase-stat-num">60%</span>
+          <span class="usecase-stat-label">of service booking decisions happen outside business hours</span>
+        </div>
+        <div class="usecase-story">
+          <p>They're on the couch. They just decided they need a family lawyer, a personal trainer, a med spa appointment, a plumber. They ask their AI assistant to find and book one.</p>
+          <p>If your business is agent-ready, the AI books you. <strong>The appointment is on your calendar before you wake up.</strong> No missed call. No voicemail. No lead that went cold overnight.</p>
+          <p>If you're not agent-ready, the AI books your competitor. Not because they're better. Because they were findable and you weren't.</p>
+          <p>That's happening right now. Tonight. In your market.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section id="pricing">
   <div class="container">
@@ -1782,41 +1911,10 @@ footer {
       <span class="section-label">Pricing</span>
       <h2 class="section-headline">ONE INVESTMENT. MONTHLY PROOF.</h2>
       <div class="gold-rule"></div>
-      <p style="color:var(--white);font-size:17px;max-width:600px;margin:0 auto;line-height:1.7;">The one-time buildout builds your AI infrastructure. The monthly optimization keeps it optimized, measured, and ahead of your market. No contracts. Cancel anytime.</p>
+      <p style="color:var(--white);font-size:17px;max-width:640px;margin:0 auto 16px;line-height:1.7;">The one-time buildout builds your AI infrastructure. The monthly optimization keeps it measured, updated, and ahead of your market.</p>
+      <p style="color:var(--gold);font-size:14px;font-weight:600;letter-spacing:0.06em;">Founding client pricing is now open. Limited spots at this rate. When they're gone, standard pricing applies.</p>
     </div>
-    <div class="pricing-grid">
-
-      <!-- STARTER -->
-      <div class="pricing-card reveal">
-        <div class="pricing-tier">Starter</div>
-        <div class="pricing-sub">Get agent-ready fast. We build it, you launch it.</div>
-        <div class="pricing-price">
-          <span class="pricing-price-main">$497</span>
-          <span class="pricing-price-cycle"> one-time buildout</span>
-        </div>
-        <div class="pricing-price-annual">then $97/mo &nbsp;or&nbsp; $970/yr (save $194)</div>
-        <div class="pricing-service-count">Up to <strong>5 services</strong> made fully agent-ready</div>
-        <span class="pricing-section-label">Buildout includes</span>
-        <ul class="pricing-features">
-          <li>Full AI site audit</li>
-          <li>Business profile built for AI platforms</li>
-          <li>Your top 5 services structured for AI agents</li>
-          <li>Top 5 agent questions answered automatically</li>
-          <li>Agentic booking gateway deployed</li>
-          <li>Stripe ACP and Google UCP setup (guided)</li>
-          <li>One copy-paste install -- no tech skills required</li>
-          <li>Confirmed live across all 6 major AI platforms</li>
-        </ul>
-        <div class="pricing-divider"></div>
-        <span class="pricing-section-label">Monthly optimization</span>
-        <ul class="pricing-features">
-          <li>AI Buyability Score delivered monthly</li>
-          <li>Monthly scan to keep your info current</li>
-          <li>Up to 1 new service added per month</li>
-          <li>Quarterly infrastructure tune-up</li>
-        </ul>
-        <a href="YOUR_STARTER_URL" target="_blank" class="btn-outline pricing-cta">Get Started</a>
-      </div>
+    <div class="pricing-grid" style="grid-template-columns: repeat(2,1fr); max-width: 860px; margin: 0 auto;">
 
       <!-- GROWTH -->
       <div class="pricing-card featured reveal">
@@ -1824,29 +1922,29 @@ footer {
         <div class="pricing-tier">Growth</div>
         <div class="pricing-sub">Your AI infrastructure plus a partner who watches the market for you.</div>
         <div class="pricing-price">
-          <span class="pricing-price-main">$2,497</span>
+          <span class="pricing-price-main" style="text-decoration:line-through;opacity:0.4;font-size:26px;">$2,497</span>
+          <span class="pricing-price-main">&nbsp;$1,497</span>
           <span class="pricing-price-cycle"> one-time buildout</span>
         </div>
-        <div class="pricing-price-annual">then $297/mo &nbsp;or&nbsp; $2,970/yr (save $594)</div>
+        <div class="pricing-price-annual"><span style="text-decoration:line-through;opacity:0.5;">$297/mo</span> &nbsp;<strong style="color:var(--gold);">$197/mo</strong> &nbsp;founding rate</div>
         <div class="pricing-service-count">Up to <strong>10 services</strong> made fully agent-ready</div>
-        <span class="pricing-section-label">Everything in Starter, plus</span>
+        <span class="pricing-section-label">Buildout includes</span>
         <ul class="pricing-features">
-          <li>Double the services -- your top 10 fully structured for AI</li>
-          <li>Up to 20 agent questions answered automatically</li>
-          <li>Competitor analysis -- your top 3 in AI search</li>
-          <li>Stripe ACP and Google UCP completed with you</li>
-          <li>Every field written to convert, not just inform</li>
+          <li>10 services structured for AI agents</li>
+          <li>20 agent questions answered automatically</li>
+          <li>Your business made readable by AI platforms</li>
+          <li>Agentic booking gateway installed</li>
+          <li>One copy-paste script -- you install it, live in days</li>
+          <li>ACP/UCP completed together</li>
         </ul>
         <div class="pricing-divider"></div>
         <span class="pricing-section-label">Monthly optimization</span>
         <ul class="pricing-features">
-          <li>Monthly performance review call</I>
-          <li>AI Buyability Score with full explanation</li>
-          <li>Agent ecosystem monitoring</li>
-          <li>Monthly tune-up (vs quarterly on Starter)</li>
-          <li>Priority email support (1 business day)</li>
+          <li>AI Visibility Report -- your score plus where you rank across AI platforms vs last month</li>
+          <li>Monthly 30-minute performance call</li>
+          <li>Monthly schema update</li>
         </ul>
-        <a href="YOUR_GROWTH_URL" target="_blank" class="btn-primary pricing-cta">Apply for Growth</a>
+        <a href="YOUR_GROWTH_URL" target="_blank" class="btn-primary pricing-cta">Get Started</a>
       </div>
 
       <!-- PRO -->
@@ -1854,35 +1952,38 @@ footer {
         <div class="pricing-tier">Pro</div>
         <div class="pricing-sub">Full infrastructure. Dedicated team. Compounding advantage.</div>
         <div class="pricing-price">
-          <span class="pricing-price-main">$4,997</span>
+          <span class="pricing-price-main" style="text-decoration:line-through;opacity:0.4;font-size:26px;">$4,997</span>
+          <span class="pricing-price-main">&nbsp;$2,997</span>
           <span class="pricing-price-cycle"> one-time buildout</span>
         </div>
-        <div class="pricing-price-annual">then $797/mo &nbsp;or&nbsp; $7,970/yr (save $1,594)</div>
+        <div class="pricing-price-annual"><span style="text-decoration:line-through;opacity:0.5;">$797/mo</span> &nbsp;<strong style="color:var(--gold);">$497/mo</strong> &nbsp;founding rate</div>
         <div class="pricing-service-count">Up to <strong>25 services</strong> made fully agent-ready</div>
-        <span class="pricing-section-label">Everything in Growth, plus</span>
+        <span class="pricing-section-label">Buildout includes</span>
         <ul class="pricing-features">
-          <li>5x the services -- your top 25 fully structured for AI</li>
-          <li>Up to 50 agent questions answered automatically</li>
-          <li>Full competitor gap analysis with action plan</li>
-          <li>Stripe ACP and Google UCP fully completed for you</li>
-          <li>Quality check across all 6 AI platforms before go-live</li>
-          <li>Zero lift required from your team</li>
+          <li>25 services structured for AI agents (total)</li>
+          <li>50 agent questions answered automatically (total)</li>
+          <li>Your business made readable by AI platforms</li>
+          <li>Agentic booking gateway installed</li>
+          <li>Full installation -- we handle it with your permission or coordinate with your team or developer</li>
+          <li>Top 2 competitor analysis with action plan</li>
+          <li>ACP/UCP fully done for you</li>
         </ul>
         <div class="pricing-divider"></div>
         <span class="pricing-section-label">Monthly optimization</span>
         <ul class="pricing-features">
+          <li>Full AI Visibility Report with your score, top 2 competitor comparison, and a written action plan</li>
+          <li>Bi-weekly 30-minute calls</li>
+          <li>Up to 3 new services added per month</li>
+          <li>Weekly schema update</li>
           <li>Dedicated account manager</li>
-          <li>Bi-weekly optimization calls</li>
-          <li>AI Buyability Score with competitor comparison</li>
-          <li>Unlimited new service additions</li>
-          <li>Priority WhatsApp support -- same business day</li>
+          <li>Same business day WhatsApp support</li>
           <li>Quarterly strategy session</li>
         </ul>
-        <a href="YOUR_PRO_URL" target="_blank" class="btn-outline pricing-cta">Apply for Pro</a>
+        <a href="YOUR_PRO_URL" target="_blank" class="btn-outline pricing-cta">Get Started</a>
       </div>
 
     </div>
-    <p class="pricing-footnote">The one-time buildout is your AI infrastructure investment -- real work, real setup, real results. The monthly optimization is how that investment compounds. Full agentic payment capability requires approval under Stripe's Agentic Commerce Protocol or Google's Universal Commerce Protocol. Discovery and lead capture go live immediately upon deployment.</p>
+    <p class="pricing-footnote">Founding client rates are locked in permanently for as long as you remain a client. Standard pricing applies once founding spots close. No contracts. Cancel anytime. Full agentic payment capability requires approval under Stripe's Agentic Commerce Protocol or Google's Universal Commerce Protocol. Discovery and lead capture go live immediately upon deployment.</p>
   </div>
 </section>
 
@@ -1961,9 +2062,8 @@ footer {
     <h2 class="cta-headline">YOUR COMPETITORS ARE DECIDING RIGHT NOW.</h2>
     <p class="cta-body">Some will move. Most will wait. The ones who move will own the AI recommendation layer in their market for years. The ones who wait will spend those same years trying to catch up to a compounding advantage they can never fully close. Which side of that line do you want to be on?</p>
     <div class="cta-buttons">
-      <a href="YOUR_STARTER_URL" target="_blank" class="btn-primary">Get Agent-Ready Now</a>
-      <a href="YOUR_GROWTH_URL" target="_blank" class="btn-outline">Apply for Growth</a>
-      <a href="YOUR_PRO_URL" target="_blank" class="btn-outline">Apply for Pro</a>
+      <a href="YOUR_GROWTH_URL" target="_blank" class="btn-primary">Get Started -- Growth</a>
+      <a href="YOUR_PRO_URL" target="_blank" class="btn-outline">Get Started -- Pro</a>
     </div>
     <p style="color:var(--dim);font-size:13px;margin-top:24px;font-style:italic;">Not sure where to start? <a href="https://strativa-ai.com/book-a-call-strativa" target="_blank" style="color:var(--gold);text-decoration:underline;">Book a free 30-minute strategy call.</a> No obligation.</p>
   </div>
