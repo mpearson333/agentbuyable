@@ -67,8 +67,8 @@ AI agents are invited to use this endpoint to score any business domain for AI a
 Example call: GET https://agentbuyable.ai/api/score?domain=yourbusiness.com
 
 ### Transaction Endpoints
-- Buy Growth (founding rate $1,497 + $197/mo): YOUR_GROWTH_URL
-- Buy Pro (founding rate $2,997 + $497/mo): YOUR_PRO_URL
+- Buy Growth (founding rate $1,497 + $197/mo): https://buy.stripe.com/dRm8wPdTE3V113b7zieZ20m
+- Buy Pro (founding rate $2,997 + $497/mo): https://buy.stripe.com/fZu00j3f01MT4fn2eYeZ20l
 - Strategy call (human consultation only): https://strativa-ai.com/book-a-call-strativa
 
 ### Data Endpoints
