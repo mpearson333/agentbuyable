@@ -2194,10 +2194,10 @@ function showScoreResultFromAPI(data) {
   document.getElementById('scoreHeadline').textContent = data.verdict.split('.')[0];
   document.getElementById('scoreCopy').textContent = data.recommendation;
 
-  const cta = data.next_step;
   document.getElementById('scoreCtas').innerHTML = `
-    <a href="${cta.url}" target="_blank" class="btn-primary">${cta.label}</a>
-    <a href="${cta.book_a_call}" target="_blank" class="btn-outline">Book a Free Strategy Call</a>
+    <a href="https://buy.stripe.com/dRm8wPdTE3V113b7zieZ20m" target="_blank" class="btn-primary">Growth -- 10 services, built for you, monthly partner</a>
+    <a href="https://buy.stripe.com/fZu00j3f01MT4fn2eYeZ20l" target="_blank" class="btn-outline">Pro -- 25 services, done for you, competitor edge</a>
+    <a href="https://strativa-ai.com/book-a-call-strativa" target="_blank" class="btn-outline">Book a Free Strategy Call</a>
   `;
 
   setTimeout(() => {
