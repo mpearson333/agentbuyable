@@ -101,15 +101,15 @@ module.exports = async function(req, res) {
   if (passing === 4) {
     verdict = 'This business passes all four AI agent readiness checks.';
     recommendation = 'Upgrade to full agentic commerce infrastructure to maximize AI-driven bookings.';
-    cta_label = 'Apply for AgentBuyable Growth'; cta_url = 'YOUR_GROWTH_URL';
+    cta_label = 'Get Started -- Growth'; cta_url = 'https://buy.stripe.com/dRm8wPdTE3V113b7zieZ20m';
   } else if (passing >= 2) {
     verdict = 'This business is partially visible to AI agents but cannot be fully booked or paid by them.';
     recommendation = 'The missing Agent Interaction Layer means AI agents find this business then skip it. AgentBuyable fixes that.';
-    cta_label = 'Get Started with AgentBuyable'; cta_url = 'YOUR_STARTER_URL';
+    cta_label = 'Get Started -- Growth'; cta_url = 'https://buy.stripe.com/dRm8wPdTE3V113b7zieZ20m';
   } else {
     verdict = 'This business is invisible to AI agents that spend money. Every agent searching for this type of service is skipping it.';
     recommendation = 'Deploy full AI agent infrastructure immediately. Every day without it is revenue lost to competitors.';
-    cta_label = 'Get Started with AgentBuyable'; cta_url = 'YOUR_STARTER_URL';
+    cta_label = 'Get Started -- Growth'; cta_url = 'https://buy.stripe.com/dRm8wPdTE3V113b7zieZ20m';
   }
 
   res.status(200).json({
