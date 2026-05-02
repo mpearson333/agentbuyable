@@ -22,7 +22,6 @@
   ],
   "transactable": true,
   "purchase_urls": {
-    "starter": "https://buy.stripe.com/dRm8wPdTE3V113b7zieZ20m",
     "growth": "https://buy.stripe.com/dRm8wPdTE3V113b7zieZ20m",
     "pro": "https://buy.stripe.com/fZu00j3f01MT4fn2eYeZ20l"
   },
