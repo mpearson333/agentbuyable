@@ -147,11 +147,15 @@ nav {
 }
 
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 22px;
-  letter-spacing: 0.08em;
-  color: var(--gold);
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-logo svg {
+  height: 38px;
+  width: auto;
 }
 
 .nav-links {
@@ -1444,7 +1448,6 @@ footer {
 /* =====================
    RESPONSIVE
    ===================== */
-/* HAMBURGER */
 .nav-hamburger {
   display: none;
   flex-direction: column;
@@ -1526,7 +1529,26 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">AgentBuyable</a>
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 160 44" xmlns="http://www.w3.org/2000/svg" height="38">
+      <!-- Center dot -->
+      <circle cx="22" cy="22" r="4.5" fill="#F0B429"/>
+      <!-- Node lines and endpoints -->
+      <line x1="22" y1="22" x2="37" y2="6"  stroke="#F0B429" stroke-width="1.4" stroke-linecap="round"/>
+      <circle cx="37" cy="6"  r="3" fill="#F0B429"/>
+      <line x1="22" y1="22" x2="16" y2="10" stroke="#F0B429" stroke-width="1.4" stroke-linecap="round"/>
+      <circle cx="16" cy="10" r="3" fill="#F0B429"/>
+      <line x1="22" y1="22" x2="4"  y2="28" stroke="#F0B429" stroke-width="1.4" stroke-linecap="round"/>
+      <circle cx="4"  cy="28" r="3" fill="#F0B429"/>
+      <line x1="22" y1="22" x2="21" y2="37" stroke="#F0B429" stroke-width="1.4" stroke-linecap="round"/>
+      <circle cx="21" cy="37" r="3" fill="#F0B429"/>
+      <line x1="22" y1="22" x2="40" y2="31" stroke="#F0B429" stroke-width="1.4" stroke-linecap="round"/>
+      <circle cx="40" cy="31" r="3" fill="#F0B429"/>
+      <!-- Wordmark -->
+      <text x="50" y="17" font-family="DM Sans, sans-serif" font-size="13" font-weight="500" letter-spacing="0.5" fill="#FFFFFF">Agent</text>
+      <text x="50" y="34" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="0.5" fill="#F0B429">Buyable</text>
+    </svg>
+  </a>
   <ul class="nav-links">
     <li><a href="#problem">Why Now</a></li>
     <li><a href="#compound">The Advantage</a></li>
@@ -1851,7 +1873,6 @@ footer {
     </div>
     <div class="usecase-grid">
 
-      <!-- USE CASE 1: Hotel OTA -->
       <div class="usecase-card reveal">
         <div class="usecase-tag">Boutique Hotels</div>
         <h3 class="usecase-headline">STOP PAYING EXPEDIA 25% OF EVERY BOOKING.</h3>
@@ -1866,7 +1887,6 @@ footer {
         </div>
       </div>
 
-      <!-- USE CASE 2: After Hours -->
       <div class="usecase-card reveal">
         <div class="usecase-tag">Every Service Business</div>
         <h3 class="usecase-headline">YOUR NEXT CLIENT IS SEARCHING AT 11PM.</h3>
@@ -1898,7 +1918,6 @@ footer {
     </div>
     <div class="pricing-grid" style="grid-template-columns: repeat(2,1fr); max-width: 860px; margin: 0 auto;">
 
-      <!-- GROWTH -->
       <div class="pricing-card featured reveal">
         <div class="pricing-badge">Most Popular</div>
         <div class="pricing-tier">Growth</div>
@@ -1929,7 +1948,6 @@ footer {
         <a href="https://buy.stripe.com/dRm8wPdTE3V113b7zieZ20m" target="_blank" class="btn-primary pricing-cta">Get Started</a>
       </div>
 
-      <!-- PRO -->
       <div class="pricing-card reveal">
         <div class="pricing-tier">Pro</div>
         <div class="pricing-sub">Full infrastructure. Dedicated team. Compounding advantage.</div>
@@ -2062,9 +2080,6 @@ footer {
 </footer>
 
 <script>
-// =====================
-// MOBILE MENU
-// =====================
 function toggleMobileMenu() {
   document.getElementById('mobileMenu').classList.toggle('open');
 }
@@ -2072,14 +2087,10 @@ function closeMobileMenu() {
   document.getElementById('mobileMenu').classList.remove('open');
 }
 
-// =====================
-// SCROLL REVEAL
-// =====================
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
       e.target.classList.add('visible');
-      // Animate compound bars when section comes into view
       e.target.querySelectorAll('.compound-bar-fill').forEach(bar => {
         bar.classList.add('animated');
       });
@@ -2089,9 +2100,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
 
-// =====================
-// FAQ
-// =====================
 function toggleFaq(btn) {
   const item = btn.closest('.faq-item');
   const isOpen = item.classList.contains('open');
@@ -2099,9 +2107,6 @@ function toggleFaq(btn) {
   if (!isOpen) item.classList.add('open');
 }
 
-// =====================
-// SCORE MODAL
-// =====================
 function openScoreModal() {
   document.getElementById('scoreModal').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -2141,7 +2146,6 @@ async function runScoreCheck() {
   btn.textContent = 'Checking...';
   document.getElementById('scoreResult').classList.remove('visible');
 
-  // Reset all checks to "Checking..." state
   for (let i = 0; i < 4; i++) {
     const item = document.getElementById('check-' + i);
     item.className = 'check-item';
@@ -2156,7 +2160,6 @@ async function runScoreCheck() {
 
     if (data.error) throw new Error(data.error);
 
-    // Animate results in one by one
     for (let i = 0; i < data.checks.length; i++) {
       await sleep(400);
       const check = data.checks[i];
@@ -2211,7 +2214,6 @@ function showScoreResultFromAPI(data) {
   document.getElementById('scoreResult').classList.add('visible');
 }
 
-// Allow Enter key on input
 document.getElementById('domainInput').addEventListener('keydown', function(e) {
   if (e.key === 'Enter') runScoreCheck();
 });
