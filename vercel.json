@@ -7,6 +7,7 @@
   },
   "routes": [
     { "src": "/api/score", "dest": "/api/score.js" },
+    { "src": "/api/services.json", "dest": "/api/services.json" },
     { "src": "/agent", "dest": "/agent.html" },
     { "src": "/terms", "dest": "/terms.html" },
     { "src": "/privacy", "dest": "/privacy.html" }
