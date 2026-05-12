@@ -22,8 +22,8 @@
   ],
   "transactable": true,
   "purchase_urls": {
-    "growth": "https://buy.stripe.com/dRm8wPdTE3V113b7zieZ20m",
-    "pro": "https://buy.stripe.com/fZu00j3f01MT4fn2eYeZ20l"
+    "growth": "https://buy.stripe.com/14A4gz16S1MT5jr5raeZ20n",
+    "pro": "https://buy.stripe.com/7sY14n5n8639cLTdXGeZ20o"
   },
   "booking_url": "https://strativa-ai.com/book-a-call-strativa",
   "services_endpoint": "https://agentbuyable.ai/api/services.json"
