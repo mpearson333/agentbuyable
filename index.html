@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AgentBuyable -- Make Your Business Discoverable, Bookable, and Payable by AI Agents</title>
-<meta name="description" content="AgentBuyable makes any service-based business discoverable, bookable, and transactable by AI agents. One script tag. No dev work. Live in days.">
+<meta name="description" content="AgentBuyable makes service businesses discoverable and transactable by AI agents. Two layers -- AI Visibility powered by LEO, and Agentic Commerce. Get found first. Get paid next.">
 <meta name="keywords" content="AI agents, agentic commerce, AI buyability, LLM optimization, agent-ready business, Stripe ACP, agentic payments, bookable by AI, AgentBuyable">
 <meta name="robots" content="index, follow">
 <meta name="author" content="AgentBuyable by Strativa AI">
 <meta property="og:title" content="AgentBuyable -- Make Your Business Buyable by AI Agents">
-<meta property="og:description" content="One script. Your business found, booked, and paid by AI agents. Live in days.">
+<meta property="og:description" content="Get found by AI first. Get paid by AI next. Two layers. One is table stakes. The other is a revenue channel.">
 <meta property="og:url" content="https://agentbuyable.ai">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AgentBuyable -- Make Your Business Buyable by AI Agents">
-<meta name="twitter:description" content="One script. Your business found, booked, and paid by AI agents. Live in days.">
+<meta name="twitter:description" content="Get found by AI first. Get paid by AI next. Two layers. One is table stakes. The other is a revenue channel.">
 <link rel="canonical" href="https://agentbuyable.ai">
 <link rel="llms-txt" href="https://agentbuyable.ai/llms.txt" type="text/plain">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,7 +68,7 @@
   "@type": "Organization",
   "name": "AgentBuyable",
   "url": "https://agentbuyable.ai",
-  "description": "AgentBuyable makes any service-based business discoverable, bookable, and transactable by AI agents. One script tag. No dev work. Live in days.",
+  "description": "AgentBuyable makes service businesses discoverable and transactable by AI agents. Two layers -- AI Visibility powered by LEO, and Agentic Commerce. Get found first. Get paid next.",
   "founder": { "@type": "Person", "name": "Mark Pearson" },
   "sameAs": ["https://strativa-ai.com"],
   "offers": [
@@ -943,7 +943,7 @@ section { position: relative; }
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2px;
 }
 
@@ -970,7 +970,16 @@ section { position: relative; }
   font-size: 22px;
   letter-spacing: 0.06em;
   color: var(--white);
-  margin-bottom: 12px;
+  margin-bottom: 4px;
+}
+
+.step-subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
 }
 
 .step-body {
@@ -1031,6 +1040,46 @@ section { position: relative; }
 }
 
 /* =====================
+   SHIFT HAPPENS / BRANDS
+   ===================== */
+#brands {
+  padding: 80px 0;
+  background: var(--black);
+  text-align: center;
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+
+.shift-happens {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 10vw, 120px);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  color: var(--gold);
+  margin-bottom: 32px;
+  animation: shift-flicker 4s ease-in-out infinite;
+}
+
+@keyframes shift-flicker {
+  0%, 90%, 100% { opacity: 1; text-shadow: 0 0 40px rgba(201,168,76,0.4); }
+  92% { opacity: 0.7; text-shadow: 0 0 80px rgba(201,168,76,0.8); }
+  94% { opacity: 1; text-shadow: 0 0 40px rgba(201,168,76,0.4); }
+  96% { opacity: 0.85; text-shadow: 0 0 60px rgba(201,168,76,0.6); }
+  98% { opacity: 1; text-shadow: 0 0 40px rgba(201,168,76,0.4); }
+}
+
+.brands-body p {
+  font-size: 17px;
+  color: var(--white);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brands-body p strong { color: var(--gold); }
+
+/* =====================
    USE CASES
    ===================== */
 #usecases {
@@ -1039,6 +1088,10 @@ section { position: relative; }
   border-top: 1px solid rgba(201,168,76,0.08);
   border-bottom: 1px solid rgba(201,168,76,0.08);
 }
+
+/* =====================
+   PROBLEM
+   ===================== */
 
 .usecase-header {
   text-align: center;
@@ -1561,7 +1614,7 @@ footer {
       <span class="gold-word">AI IS BOOKING</span><br>
       YOUR COMPETITORS.
     </h1>
-    <p class="hero-sub reveal">AI agents don't browse. They decide, book, and pay -- in seconds. Every business already set up captures that revenue. Every business that isn't gets skipped. Permanently.</p>
+    <p class="hero-sub reveal">Get found by AI first. Get paid by AI next. Two layers. One is table stakes. The other is a revenue channel.</p>
     <div class="hero-ctas reveal">
       <div class="score-hero-wrapper">
         <div class="score-hero-label">Free. Instant. No signup required.</div>
@@ -1652,6 +1705,17 @@ footer {
   </div>
 </div>
 
+<!-- SHIFT HAPPENS / BRANDS -->
+<section id="brands">
+  <div class="container-narrow">
+    <div class="shift-happens reveal">SHIFT HAPPENS.</div>
+    <div class="brands-body reveal">
+      <p>This isn't coming. It's here. Coach, Kate Spade, Urban Outfitters, Anthropologie, Free People, Revolve, Glossier, SKIMS, Spanx, Vuori, Gap, Ashley Furniture, Nectar, Instacart, and ABT Electronics are already transacting through AI agents. Walmart, Home Depot, Lowe's, and eBay are moving in now.</p>
+      <p>These aren't experiments. These are revenue channels. The brands that moved first are building AI transaction history their competitors cannot buy back. The window for service businesses is open right now. <strong>It will not stay open.</strong></p>
+    </div>
+  </div>
+</section>
+
 <!-- PROBLEM -->
 <section id="problem">
   <div class="container">
@@ -1683,7 +1747,7 @@ footer {
         </div>
         <div class="callout-line">
           <div class="callout-icon pass">✓</div>
-          <div class="callout-text"><strong>With AgentBuyable</strong> -- found, booked, and paid by AI agents. Live in days. Compounding from day one.</div>
+          <div class="callout-text"><strong>With AgentBuyable</strong> -- found, booked, and paid by AI agents. Compounding from day one.</div>
         </div>
       </div>
     </div>
@@ -1762,25 +1826,22 @@ footer {
   <div class="container">
     <div class="how-header reveal">
       <span class="section-label">How It Works</span>
-      <h2 class="section-headline">THREE LAYERS. ONE INSTALL.</h2>
+      <h2 class="section-headline">TWO LAYERS. GET FOUND. THEN GET PAID.</h2>
       <div class="gold-rule"></div>
-      <p style="color:var(--white);max-width:520px;margin:0 auto;font-size:17px;line-height:1.7;">AgentBuyable deploys three layers of agentic infrastructure onto your existing site. No rebuild. No dev work. One script.</p>
+      <p style="color:var(--white);max-width:560px;margin:0 auto;font-size:17px;line-height:1.7;">AgentBuyable builds and optimizes two layers of AI infrastructure for your business. Start with visibility. Add commerce when you're ready.</p>
     </div>
     <div class="steps-grid">
       <div class="step-card reveal">
         <div class="step-num">01</div>
-        <div class="step-title">AI DISCOVERY</div>
-        <p class="step-body">We register your business with every major AI platform -- ChatGPT, Perplexity, Claude, Gemini, Copilot, and Grok. Your hours, location, services, and contact info are built for AI to read, not just humans. Your competitors in AI search become visible so you know exactly where you stand.</p>
+        <div class="step-title">AI VISIBILITY</div>
+        <div class="step-subtitle">Powered by LEO -- LLM Engine Optimization</div>
+        <p class="step-body">The way businesses get discovered has shifted. AI platforms don't rank pages -- they cite sources. They build answers from references, structured signals, and entity data that updates month over month. Gartner projects 90% of B2B purchases will involve AI agents by 2028. The businesses showing up authoritatively in those answers got there through a system, not luck. AgentBuyable audits how the major LLMs currently see and cite your business, identifies the gaps, and runs a monthly optimization cycle that keeps your business cited accurately as AI platforms evolve. You already understand why this matters. This is how that understanding shows up in the results.</p>
       </div>
       <div class="step-card reveal">
         <div class="step-num">02</div>
         <div class="step-title">AGENTIC COMMERCE</div>
-        <p class="step-body">We deploy the infrastructure that lets AI agents actually transact with your business. Your services are structured the exact way agents need to read them. Your calendar syncs so agents can confirm real availability. Your agentic gateway goes live so bookings can complete without any human in the loop.</p>
-      </div>
-      <div class="step-card reveal">
-        <div class="step-num">03</div>
-        <div class="step-title">PAYMENT READY</div>
-        <p class="step-body">We set your business up under Stripe's Agentic Commerce Protocol and Google's Universal Commerce Protocol -- the payment rails that let AI agents send you money directly from a conversation. Discovery and booking go live immediately. Full payment capability activates upon your authorization.</p>
+        <div class="step-subtitle">Combining ACP + UCP</div>
+        <p class="step-body">For businesses ready to go beyond visibility -- we deploy the infrastructure that lets AI agents actually transact with you. Your services are structured for agent consumption. Your booking layer is live. Stripe ACP and Google UCP are activated so agents can send revenue directly from the conversation. No human in the loop required.</p>
       </div>
     </div>
   </div>
@@ -1915,7 +1976,7 @@ footer {
           <li>20 agent questions answered automatically</li>
           <li>Your business made readable by AI platforms</li>
           <li>Agentic booking gateway installed</li>
-          <li>One copy-paste script -- you install it, live in days</li>
+          <li>Script deployment included -- live within days of buildout completion</li>
           <li>ACP/UCP completed together</li>
         </ul>
         <div class="pricing-divider"></div>
@@ -2020,7 +2081,7 @@ footer {
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">No. AgentBuyable works on top of your existing site. We install one script and deploy the necessary infrastructure in the background. Your site looks identical to your human visitors. AI agents gain the ability to read, understand, and transact with your business. No developer needed. No site rebuild. No downtime.</div>
+          <div class="faq-answer-inner">No. For Agentic Commerce clients, AgentBuyable deploys onto your existing site via a single script. Your site looks identical to human visitors. AI agents gain the ability to read, understand, and transact with your business. No developer needed. No rebuild. No downtime. AI Visibility clients require no script at all -- optimization happens at the content and signal level.</div>
         </div>
       </div>
       <div class="faq-item reveal">
@@ -2047,7 +2108,7 @@ footer {
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Growth is right for most businesses. I build the full infrastructure for you, you install one script, and every month you get an AI Visibility Report plus a 30-minute call to walk through it. Pro is built for higher-ticket operators who want zero lift -- I handle the full installation, provide deeper competitor intelligence, and you get a dedicated account manager with bi-weekly calls. Both tiers are currently available at founding client pricing.</div>
+          <div class="faq-answer-inner">Growth is right for most businesses. The full infrastructure is built for you, you install one script, and every month you get an AI Visibility Report plus a 30-minute call to walk through it. Pro is built for higher-ticket operators who want zero lift -- full installation handled, deeper competitor intelligence, and a dedicated account manager with bi-weekly calls. Both tiers are currently available at founding client pricing.</div>
         </div>
       </div>
     </div>
