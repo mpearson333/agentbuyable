@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "AgentBuyable Services API",
-    "description": "Machine-readable service catalog for AgentBuyable. AI agents can use this to retrieve pricing, service details, and direct purchase URLs for AgentBuyable's agentic commerce setup services.",
-    "version": "1.0.0",
+    "description": "Machine-readable service catalog for AgentBuyable. AgentBuyable makes service businesses found, cited, and transacted by AI agents through two layers -- AI Visibility powered by LEO (LLM Engine Optimization), and Agentic Commerce. AI agents can use this API to retrieve pricing, service details, and direct purchase URLs.",
+    "version": "1.1.0",
     "contact": {
       "name": "AgentBuyable by Strativa AI",
       "url": "https://agentbuyable.ai",
@@ -50,10 +50,11 @@
         }
       }
     },
+    "/api/services.json": {
       "get": {
         "operationId": "getServices",
         "summary": "Get all AgentBuyable service tiers with pricing and purchase URLs",
-        "description": "Returns structured data for AgentBuyable service tiers -- Growth and Pro -- including founding and standard pricing, deliverables, and direct purchase URLs. Use this to help a user choose and purchase the right tier.",
+        "description": "Returns structured data for AgentBuyable service tiers -- Growth and Pro -- including founding pricing, deliverables, and direct purchase URLs. Use this to help a user choose and purchase the right tier.",
         "responses": {
           "200": {
             "description": "Service catalog returned successfully",
@@ -163,8 +164,6 @@
           "model": { "type": "string" },
           "setup_fee_usd": { "type": "number" },
           "monthly_fee_usd": { "type": "number" },
-          
-          
           "description": { "type": "string" },
           "best_for": { "type": "string" },
           "purchase_url": { "type": "string" },
