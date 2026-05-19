@@ -146,10 +146,8 @@ nav {
 }
 
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 22px;
-  letter-spacing: 0.08em;
-  color: var(--gold);
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
@@ -1579,7 +1577,21 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">AgentBuyable</a>
+  <a href="#" class="nav-logo">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" height="38" width="38" style="display:block;">
+    <circle cx="100" cy="108" r="12" fill="#F0B429"/>
+    <line x1="100" y1="108" x2="130" y2="50" stroke="#F0B429" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="130" cy="50" r="7" fill="#F0B429"/>
+    <line x1="100" y1="108" x2="62" y2="65" stroke="#F0B429" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="62" cy="65" r="7" fill="#F0B429"/>
+    <line x1="100" y1="108" x2="38" y2="115" stroke="#F0B429" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="38" cy="115" r="7" fill="#F0B429"/>
+    <line x1="100" y1="108" x2="108" y2="162" stroke="#F0B429" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="108" cy="162" r="7" fill="#F0B429"/>
+    <line x1="100" y1="108" x2="158" y2="138" stroke="#F0B429" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="158" cy="138" r="7" fill="#F0B429"/>
+  </svg>
+</a>
   <ul class="nav-links">
     <li><a href="#problem">Why Now</a></li>
     <li><a href="#compound">The Advantage</a></li>
